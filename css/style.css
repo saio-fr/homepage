@@ -58,6 +58,8 @@ GENERAL
 	}
 
 	.test {
+		position: relative;
+  		z-index: 100;
 		width: 670px;
 		margin: 52px auto 0px auto;
 	}
@@ -161,7 +163,8 @@ GENERAL
 	}
 
 	nav .selector {
-		display: inline-block;
+		/*display: inline-block;*/
+		display: none;
 		font-size: 14px;
 		font-weight: 400;
 		margin-left: 11px;
@@ -219,11 +222,6 @@ GENERAL
 		margin-top: 38px;
 	}
 
-	#punchline .test {
-		width: 670px;
-		margin: 52px auto 0px auto;
-	}
-
 	#punchline input {
 		display: inline-block;
 		vertical-align: top;
@@ -235,16 +233,10 @@ GENERAL
 		padding-left: 20px;
 	}
 
-	#punchline .button {
-		border: 1px solid #fff;
-		color: #fff;
-	}
-
 	#punchline img {
 		position: absolute;
 		width: 500px;
 		right: 160px;
-  		top: -100px;
 		opacity: 0.2;
 	}
 
@@ -288,7 +280,7 @@ GENERAL
 
 	#features .block {
 		display: inline-block;
-		border-top: 10px solid #64daff;
+		border-top: 5px solid #64daff;
 		background-color: #fff;
 		height: 620px;
 		margin-bottom: 80px;
@@ -333,8 +325,46 @@ GENERAL
 		margin: 0 auto;
 	}
 
+	#features .chart {
+		display: inline-block;
+		width: 44px;
+		min-height: 60px;
+		margin: 0px 23px;
+	}
+
+	#features .chart:nth-child(1) {
+		height: 200px;
+	}
+
+	#features .chart:nth-child(2) {
+		height: 260px;
+	}
+
+	#features .chart:nth-child(3) {
+		height: 100px;
+	}
+
+	#features .chart:nth-child(4) {
+		height: 140px;
+	}
+
+	#features .chart:nth-child(5) {
+		height: 80px;
+	}
+
+	#features .chart:nth-child(6) {
+		height: 200px;
+	}
+
+	#features .chart:nth-child(7) {
+		height: 260px;
+	}
+
+	#features .chart:nth-child(8) {
+		height: 240px;
+	}
+
 	#features .line {
-		border-top: 10px solid #8dc34c;
 		margin-top: 4px;
 	}
 
@@ -369,15 +399,66 @@ GENERAL
 		background-color: #ffd234;
 	}
 
+
+	/*Functions*/
+
+	#functions {
+		padding-top: 80px;
+		padding-bottom: 11px;
+	}
+
+	#functions .wrapper {
+		width: 890px;
+	}
+
+	#functions .container {
+		display: inline-block;
+		vertical-align: top;
+		width: 405px;
+		margin-right: 76px;
+	}
+
+	#functions .last {
+		margin-right: 0px;
+	}
+
+	#functions .rounded {
+		background-color: #f7f7f7;
+		width: 100px;
+		height: 100px;
+		border-radius: 50px;
+	}
+
+	#functions img {
+		display: block;
+		width: 50px;
+		margin: auto;
+		padding-top: 25px;
+	}
+
+	#functions h2 {
+		color: #3c3c3c;
+		margin-top: 16px;
+  		margin-bottom: 24px;
+	}
+
+	#functions p {
+		margin-top: 10px;
+		margin-bottom: 59px;
+	}
+
+
 	/*Action*/
 
 	#action {
+		background-color: #64daff;
 		padding-bottom: 99px;
   		padding-top: 87px;
 	}
 
 	#action h2 {
 		text-align: center;
+		font-family: 'Geomanist Light', sans-serif;
 		color: #fff;
 		margin-bottom: -4px;
 	}
@@ -431,24 +512,160 @@ GENERAL
 
 /**************
 HOME
+#64daff
 **************/
 
+	#punchline.home img {
+		top: 20px;
+	}
+
+	.home .button {
+		background-color: #ffd234;
+		border: 1px solid #fff;
+		color: #3c3c3c;
+	}
+
+	.home .button:hover {
+		background-color: rgba(255, 210, 52, 0.8);
+	}
+
+	/*Packs*/
+
+	#packs {
+		padding-top: 52px;
+		padding-bottom: 80px;
+	}
+
+	#packs h2 {
+		text-align: center;
+		color: #3c3c3c;
+		margin-bottom: 58px;
+	}
+
+	#packs .pack {
+		position: relative;
+		border: 1px solid #eeeeee;
+		display: inline-block;
+		vertical-align: top;
+		width: 218px;
+		height: 300px;
+		padding: 20px;
+		margin-right: 36px;
+	}
+
+	#packs .pack h3 {
+		text-transform: uppercase;
+		text-align: left;
+		line-height: 30px;
+		font-weight: 400;
+	    margin-top: 8px;
+	    margin-bottom: 20px;
+	}
+
+	#packs .pack p {
+		line-height: 30px;
+	}
+
+	#packs .button {
+		position: absolute;
+		width: 188px;
+		font-size: 14px;
+		line-height: 7px;
+		left: 19px;
+		bottom: 19px;
+	}
+
+	#packs .last {
+		margin-right: 0px;
+	}
+
+	#packs #knowledge.pack {
+		border-top: 5px solid #35abe0;
+	}	
+
+	#packs #knowledge.pack .button:hover {
+		border: none;
+		background-color: #35abe0;
+		color: #fff;
+	}
+
+	#packs #auto-chat.pack {
+		border-top: 5px solid #8dc34c;
+	}
+
+	#packs #auto-chat.pack .button:hover {
+		border: none;
+		background-color: #8dc34c;
+		color: #fff;
+	}
+
+	#packs #live-chat.pack {
+		border-top: 5px solid #ff7955;
+	}
+
+	#packs #live-chat.pack .button:hover {
+		border: none;
+		background-color: #ff7955;
+		color: #fff;
+	}
+
+	#packs #business-intel.pack {
+		border-top: 5px solid #ffd234;
+	}
+
+	#packs #business-intel.pack .button:hover {
+		border: none;
+		background-color: #ffd234;
+		color: #fff;
+	}
 
 
 /**************
 KNOWLEDGE BASE
+#35abe0
 **************/
 
 	#punchline.knowledge {
+		background-color: #35abe0;
+	}
 
+	#punchline.knowledge img {
+		top: -15px;
+	}
+
+	.knowledge .button {
+		background-color: #ffd234;
+		border: 1px solid #fff;
+		color: #3c3c3c;
+	}
+
+	.knowledge .button:hover {
+		background-color: rgba(255, 210, 52, 0.8);
+	}
+
+	#features.knowledge .block {
+		border-color: #35abe0;
+	}
+
+	#features.knowledge h2 {
+		color: #35abe0;
+	}	
+
+	#action.knowledge {
+		background-color: #35abe0;
 	}
 
 /**************
 AUTOMATIC CHAT
+#8dc34c
 **************/
 
 	#punchline.auto-chat {
 		background-color: #8dc34c;
+	}
+
+	#punchline.auto-chat img {
+		top: -100px;
 	}
 
 	.auto-chat .button {
@@ -458,7 +675,7 @@ AUTOMATIC CHAT
 	}
 
 	.auto-chat .button:hover {
-		background-color: #8dc34c;
+		background-color: rgba(254, 139, 108, 0.8);
 	}
 
 	#features.auto-chat .block {
@@ -470,11 +687,11 @@ AUTOMATIC CHAT
 	}	
 
 	#features.auto-chat .chart {
-		display: inline-block;
 		border: 3px solid #8dc34c;
-		width: 44px;
-		min-height: 60px;
-		margin: 0px 23px;
+	}
+
+	#features.auto-chat .line {
+		border-top: 5px solid #8dc34c;
 	}
 
 	#action.auto-chat {
@@ -485,26 +702,403 @@ AUTOMATIC CHAT
 
 /**************
 LIVE CHAT
+#ff7955
 **************/
 
 	#punchline.live-chat {
+		background-color: #ff7955;
+	}
 
+	#punchline.live-chat img {
+		top: -25px;
+	}
+
+	.live-chat .button {
+		background-color: #8dc34c;
+		border: 1px solid #fff;
+  		color: #fff;
+	}
+
+	.live-chat .button:hover {
+		background-color: rgba(3, 220, 161, 0.8);
+	}
+
+	#features.live-chat .block {
+		border-color: #ff7955;
+	}
+
+	#features.live-chat h2 {
+		color: #ff7955;
+	}	
+
+	#features.live-chat .chart {
+		display: inline-block;
+		border: 3px solid #ff7955;
+		width: 44px;
+		min-height: 60px;
+		margin: 0px 23px;
+	}
+
+	#features.live-chat .line {
+		border-top: 5px solid #ff7955;
+	}
+
+	#action.live-chat {
+		background-color: #ff7955;
 	}
 
 /**************
 BUSINESS INTELLIGENCE
+#ffd234
 **************/
 
-	#punchline .business {
-
+	#punchline.business-intel {
+		background-color: #ffd234;
 	}
+
+	#punchline.business-intel h1 {
+		color: #3c3c3c;	
+	}
+
+	#punchline.business-intel p {
+		color: #3c3c3c;	
+	}
+
+	#punchline.business-intel img {
+		top: -25px;
+		opacity: 0.3;
+	}
+
+	.business-intel .button {
+		background-color: #35abe0;
+		border: 1px solid #fff;
+  		color: #fff;
+	}
+
+	.business-intel .button:hover {
+		background-color: rgba(53, 171, 224, 0.8);
+	}
+
+	#features.business-intel .block {
+		border-color: #ffd234;
+	}
+
+	#features.business-intel h2 {
+		color: #ffd234;
+	}	
+
+	#action.business-intel {
+		background-color: #ffd234;
+	}
+
+	#action.business-intel h2 {
+		color: #3c3c3c;
+	}
+
 
 /**************
 SOCIETY
+#64daff
 **************/
 
+	#punchline.society {
+		background-image: url(../images/society.svg);
+		background-repeat: no-repeat;
+		background-position: center 470px;
+		padding-top: 185px;
+		padding-bottom: 245px;
+	}
+
+	#presentation {
+		padding-top: 67px;
+		padding-bottom: 74px;
+	}
+
+	#presentation .wrapper {
+		width: 440px;
+	}
+
+	#presentation h2 {
+		color: #3c3c3c;
+		margin-bottom: 44px;
+	}
+
+	#support {
+		background-color: #eeeeee;
+		padding-top: 67px;
+		padding-bottom: 80px;
+	}
+
+	#support .wrapper {
+		width: 880px;
+	}
+
+	#support h2 {
+		text-align: center;
+		color: #3c3c3c;
+		margin-bottom: 44px;
+	}
+
+	#support a {
+		margin-right: 116px;
+	}
+
+	#support img {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 145px;
+		max-height: 80px;
+	}
+
+	#support a.last {
+		margin-right: 0;
+	}
+
+	#team {
+		padding-top: 118px;
+		padding-bottom: 40px;
+	}
+
+	#team .wrapper {
+		width: 820px;
+	}
+
+	#team .content {
+		display: inline-block;
+		vertical-align: top;
+		width: 380px;
+		margin-right: 40px;
+		margin-bottom: 70px;
+	}
+
+	#team img {
+		display: inline-block;
+		width: 90px;
+		max-height: 140px;
+	}
+
+	#team .content div {
+		display: inline-block;
+		vertical-align: top;
+		width: 250px;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+
+	#team h3 {
+		text-align: left;
+		text-transform: none;
+		font-size: 24px;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 3px;
+	}
+
+	#team a {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		color: #3c3c3c;
+		font-family: 'Myriad Pro', sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 44px;
+		font-weight: 600;
+		background-color: #eeeeee;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		margin-top: 14px;
+		margin-right: 17px;
+	}
+
+	#team .viadeo {
+		background-image: url(../images/viadeo.svg); 
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: 10px 8px;
+	}
+
+	#team .github {
+		background-image: url(../images/github.svg); 
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: 10px 8px;
+	}
+
+	#team a:hover {
+		opacity: 0.6;
+	}
+
+	#team a img {
+		height: 20px;
+		width: 40px;
+		margin-top: 8px;
+	}
+
+	#team .content.last {
+		margin-right: 0;
+	}
+
+	.society .button {
+		background-color: #ffd234;
+		border: 1px solid #fff;
+		color: #3c3c3c;
+	}
+
+	.society .button:hover {
+		background-color: rgba(255, 210, 52, 0.8);
+	}
 
 
 /**************
 CONTACT
+#64daff
 **************/
+
+	#punchline.contact .wrapper {
+		width: 920px;
+	}
+
+	#punchline.contact .contact-us {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 400px;
+		margin-right: 96px;
+	}
+
+	#punchline.contact .contact-us h1 {
+		text-align: center;
+	}
+
+	#punchline.contact .contact-us img {
+		display: block;
+		position: static;
+  		width: 365px;
+		opacity: 1;
+		margin: 71px auto 75px auto;
+	}
+
+	#punchline.contact .contact-form {
+		display: inline-block;
+		vertical-align: top;
+		width: 400px;
+		padding-top: 15px;
+	}
+
+	#punchline.contact input {
+		width: 400px;
+  		height: 40px;
+  		font-size: 14px;
+  		line-height: 20px;
+  		padding-left: 13px;
+	}
+
+	#punchline.contact select  {
+		position: relative;
+		width: 400px;
+		height: 40px;
+		border: none;
+		background-color: #fff;
+		font-size: 14px;
+  		font-weight: 300;
+		margin-top: 20px;
+		text-indent: 5px;
+  		outline: 1px solid #fff;
+  		outline-offset: -1px;
+	}
+
+	#punchline.contact select::after  {
+		content: " ";
+		position: absolute;
+		display: inline-block;
+		margin-left: 9px;
+ 		margin-bottom: 5px;
+		width: 0; 
+		height: 0; 
+		border-left: 0px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #64daff;
+	}
+
+	#punchline.contact option {
+
+	}
+
+	#punchline.contact textarea {
+		resize: none;
+		border-radius: 0px;
+		width: 400px;
+		height: 155px;
+		border: none;
+		font-size: 14px;
+		padding: 11px 13px;
+		margin-top: 20px;
+	}
+
+	#punchline.contact .button {
+		position: absolute;
+		right: 24px;
+		width: 160px;
+		height: 55px;
+		background-color: #ffd234;
+		border: 1px solid #fff;
+		color: #3c3c3c;
+		font-size: 21px;
+		margin-top: 30px;
+	}
+
+	#punchline.contact .button:hover {
+		background-color: rgba(255, 210, 52, 0.8);
+	}
+
+
+	/*Map*/
+
+	#map {
+		background-image: url(../images/saio-map.png);
+		background-size: cover;
+		padding: 80px 0px;
+	}
+
+	#map .wrapper {
+		width: 880px;
+	}
+
+	#map .contact-details {
+		background-color: #35abe0; 
+		width: 415px;
+		height: 375px;
+		padding-top: 60px;
+	}
+
+	#map .contact-details img {
+		display: block;
+		width: 60px;
+		margin: 0 auto;
+	}
+
+	#map .contact-details p {
+		text-align: center;
+		color: #fff;
+		line-height: 35px;
+		margin-top: 20px;
+	}
+
+	#map .contact-details strong {
+		font-size: 21px;
+		font-weight: 400;
+	}
+
+	/*Message*/
+
+	#punchline.contact .message {
+		display: block;
+		position: fixed;
+		background-color: #fff;
+		width: 360px;
+		margin: auto;
+	}
+
+
