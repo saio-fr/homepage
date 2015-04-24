@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!--Chat automatique-->
+<section id="punchline" class="auto-chat">
+
+	<div class="wrapper">
+		<div class="container">
+            <h1>Vos visiteurs vous posent toujours<br>les mêmes questions ?</h1>
+            <p>Répondez-y automatiquement grâce au chat automatique SAIO<br>et concentrez-vous sur les questions qui comptent !</p>
+            <form class="test">
+                <input type="text" name="test-header" placeholder="Votre adresse e-mail" size="30" required/>
+                <button class="button mail">Demander un test</button>
+            </form>
+        </div>
+        <img src="images/robot.svg" alt="Chat automatique">
+    </div>
+
+</section>
+
+<section id="icons">
+
+    <div class="wrapper">
+        <div class="icon">
+            <div class="rounded"><img src="images/automate.svg" alt="Automatiser"></div>
+            <h3>Automatiser</h3>
+        </div>
+        <div class="icon">
+            <div class="rounded"><img src="images/filter.svg" alt="Filtrer"></div>
+            <h3>Filtrer</h3>
+        </div>
+        <div class="icon">
+            <div class="rounded"><img src="images/direct.svg" alt="Aiguiller"></div>
+            <h3>Aiguiller</h3>
+        </div>
+    </div>
+
+</section>
+
+<section id="features" class="auto-chat">
+
+        <div class="container first short left">
+            <div class="block">
+                <h2>Traitez automatiquement<br>les questions de vos<br>visiteurs 24/7</h2>
+                <p>Grâce à un moteur de reconnaissance<br>sémantique, les questions de vos visiteurs<br>sont analysées et la réponse correspondante dans votre <a href="base-de-connaissances">base de connaissances SAIO</a> est automatiquement donnée.<br><br>Le chat automatique est personnifié à travers un avatar animé qui humanise le processus.</p>
+            </div>
+        </div>
+
+        <div class="container second long right">
+            <div class="block">
+                <h2>Redirigez vos visiteurs vers<br>le bon interlocuteur</h2>
+                <p>Lorsque le chat automatique ne trouve pas de réponse satisfaisante, le visiteur est redirigé vers le bon conseiller via le canal de communication de son choix : appel, e-mail ou <a href="live-chat">live chat SAIO</a>.<br><br>Le visiteur n’est jamais laissé pour compte et a la garantie de trouver sa réponse en un minimum de temps.</p>
+            </div>
+        </div>
+
+        <div class="container third short left">
+            <div class="block">
+                <h2>Améliorez votre chat<br>automatique grâce aux<br>retours visiteurs</h2>
+                <p>Vos visiteurs peuvent évaluer la pertinence des réponses données par le chat automatique.<br>Les questions sans réponses sont également<br>remontées.<br><br>Ces informations vous permettent de compléter votre <a href="base-de-connaissances">base de connaissances SAIO</a> et d’augmenter le taux de réponse de votre chat automatique.</p>
+            </div>
+        </div>
+
+        <div class="charts">
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+        </div>
+        <div class="line"></div>
+
+        <div class="wrapper container-last">
+            <div class="capitalize">
+                <h2>Capitalisez sur les questions<br> de vos visiteurs</h2>
+                <p>Notes de satisfaction, questions les plus posées, questions sans réponses…<br><br>Toutes ces données alimentent la Business Intelligence<br>et vous permettent de comprendre les besoins de vos visiteurs et de mieux y répondre.</p>
+                <div class="button">En savoir plus</div>
+            </div>
+        </div>
+
+</section>
+
+<section id="functions">
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="rounded"><img src="images/install.svg" alt="Centraliser"></div>
+            <h2>Une mise en place simple et<br> instantanée</h2>
+            <p>Rien de plus simple : nous vous fournissons quelques lignes de code à insérer au sein de votre site Internet.<br>La solution est alors directement disponible sur votre site, il ne vous reste plus qu’à la paramétrer.</p>
+        </div>
+        <div class="container last">
+            <div class="rounded"><img src="images/admin.svg" alt="Centraliser"></div>
+            <h2>Une interface d’administration ergonomique et intuitive</h2>
+            <p>L’ensemble de nos produits est administrable via une unique interface back-office accessible directement en ligne. Aucune installation ni aucune connaissance technique ne sont nécessaires.</p>
+        </div>
+        <div class="container">
+            <div class="rounded"><img src="images/responsive.svg" alt="Centraliser"></div>
+            <h2>Une solution adaptée sur<br>tous supports</h2>
+            <p>Toutes nos solutions sont accessibles aussi bien sur ordinateur que sur mobiles et tablettes. Vos visiteurs ont toujours accès à nos service quelle que soit leur situation.</p>
+        </div>
+        <div class="container last">
+            <div class="rounded"><img src="images/api.svg" alt="Centraliser"></div>
+            <h2>Une API à votre disposition pour tous vos besoins</h2>
+            <p>Une demande ou un besoin spécifique ?<br>Notre API vous permet d’une part de développer vos propres fonctionnalités et de les intégrer facilement au sein de notre suite, d’autre part d’intégrer cette dernière à vos solutions existantes.</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="action" class="auto-chat">
+
+    <h2>Demandez une démonstration personnalisée !</h2>
+    <form class="test">
+        <input type="text" name="test-footer" placeholder="Votre adresse e-mail" size="30" required/>
+        <button class="button mail">Demander un test</button>
+    </form>
+
+</section>
+{% endblock %}
