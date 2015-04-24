@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!--Contact-->
+<section id="punchline" class="contact">
+
+	<div class="wrapper">
+		<div class="contact-us">
+	          <h1>Contactez-nous !</h1>
+              <img src="images/avatars-contact.svg" alt="Contactez-nous">
+        </div>
+
+        <form class="contact-form">
+            <input type="email" name="email" placeholder="Votre adresse e-mail" size="30" required/>
+            <select name="subject" class="subject">
+                <option value="Vos solutions m'intéressent" selected>Vos solutions m'intéressent</option>
+                <option value="Je souhaite travailler chez vous">Je souhaite travailler chez vous</option>
+                <option value="J'ai un problème">J'ai un problème</option>
+            </select>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <button class="button mail">Envoyer</button>
+        </form>
+
+    </div>
+
+</section>
+
+<section id="map">
+
+    <div class="wrapper">
+        <div class="contact-details">
+            <img src="images/localization.svg" alt="Localisation">
+            <p><strong>SAIO SAS</strong><br>44, rue Cauchy<br>94110 Arcueil<br><br>Tél : +33 1 55 01 04 37<br>E-mail : contact@saio.fr</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="action" class="home">
+
+    <h2>Demandez une démonstration personnalisée !</h2>
+    <form class="test">
+        <input type="text" name="test-footer" placeholder="Votre adresse e-mail" size="30" required/>
+        <button class="button mail">Demander un test</button>
+    </form>
+
+</section>
+{% endblock %}

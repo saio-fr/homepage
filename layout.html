@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>SAIO - Simplifiez votre relation client digitale</title>
+	<!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="dist/html5shiv.js"></script>
+            <![endif]-->
+            <link rel="icon" type="image/png" href="images/favicon_saio.png">
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <link rel="stylesheet" href="css/reset.css" type="text/css">
+            <link rel="stylesheet" href="css/style.css" type="text/css">
+		<!--[if IE]>
+    	<link type="text/css" rel="stylesheet" href="css/style-ie.css" />
+    	<![endif]-->
+		<meta name="viewport" content="width=device-width, maximum-scale=1" />
+    	<meta name="keywords" content="SAIO, base de connaissances, chat automatique, live chat, business intelligence"/>
+    	<meta name="description" content="SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+
+        {% include './include/header.html' %}
+
+        {% block content %}{% endblock %}
+    	
+        {% include './include/footer.html' %}
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58965885-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</body>
+
+</html>
