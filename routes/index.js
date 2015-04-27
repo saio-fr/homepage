@@ -32,6 +32,16 @@ router.get('/societe', function(req, res, next) {
   res.render('societe');
 });
 
+//GET recruitment page
+router.get('/recrutement', function(req, res, next) {
+  res.render('recrutement');
+});
+
+//GET legal mentions page
+router.get('/mentions-legales', function(req, res, next) {
+  res.render('mentions-legales');
+});
+
 //GET contact page
 router.get('/contact', function(req, res, next) {
   res.render('contact');

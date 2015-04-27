@@ -1277,3 +1277,24 @@ CONTACT
 	}
 
 
+/**************
+LEGAL MENTIONS
+#6ac9f6
+**************/
+
+	#punchline.legal-mentions {
+		padding-bottom: 80px;
+	}
+
+	.legal-mentions .button {
+		background-color: #ffd234;
+		border: 1px solid #fff;
+		color: #3c3c3c;
+	}
+
+	.legal-mentions .button:hover {
+		background-color: rgba(255, 210, 52, 0.8);
+	}
+
+
+
