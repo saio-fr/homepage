@@ -408,7 +408,7 @@ GENERAL
 	}
 
 	#features .charts {
-		width: 880px;
+		width: 800px;
 		margin: 0 auto;
 	}
 
@@ -718,7 +718,7 @@ HOME
 
 	/*images*/
 	#features.home .container.first {
-		background-image: url(../images/auto-chat-1.png);
+		background-image: url(../images/auto-chat-1.jpg);
 	}
 
 	#features.home .container.second {
@@ -726,7 +726,7 @@ HOME
 	}
 
 	#features.home .container.third {
-		background-image: url(../images/business-intel-2.png);
+		background-image: url(../images/business-intel-2.jpg);
 	}
 
 
@@ -827,15 +827,15 @@ AUTOMATIC CHAT
 	/*images*/
 
 	#features.auto-chat .container.first {
-		background-image: url(../images/auto-chat-1.png);
+		background-image: url(../images/auto-chat-1.jpg);
 	}
 
 	#features.auto-chat .container.second {
-		background-image: url(../images/auto-chat-2.png);
+		background-image: url(../images/auto-chat-2.jpg);
 	}
 
 	#features.auto-chat .container.third {
-		background-image: url(../images/auto-chat-3.png);
+		background-image: url(../images/auto-chat-3.jpg);
 	}
 
 	#features.auto-chat .container-last {
@@ -893,16 +893,16 @@ LIVE CHAT
 	/*images*/
 
 	#features.live-chat .container.first {
-		background-image: url(../images/live-chat-1.png);
+		background-image: url(../images/live-chat-1.jpg);
 	}
 
 	#features.live-chat .container.second {
-		background-image: url(../images/live-chat-2.png);
+		background-image: url(../images/live-chat-2.jpg);
 		background-position-x: -370px;
 	}
 
 	#features.live-chat .container.third {
-		background-image: url(../images/live-chat-3.png);
+		background-image: url(../images/live-chat-3.jpg);
 	}
 
 	#features.live-chat .container-last {
@@ -962,12 +962,12 @@ BUSINESS INTELLIGENCE
 	/*images*/
 
 	#features.business-intel .container.first {
-		background-image: url(../images/business-intel-1.png);
+		background-image: url(../images/business-intel-1.jpg);
 		background-position-x: 140px;
 	}
 
 	#features.business-intel .container.second {
-		background-image: url(../images/business-intel-2.png);
+		background-image: url(../images/business-intel-2.jpg);
 		background-position-x: -570px;
 	}
 
