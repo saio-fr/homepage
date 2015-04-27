@@ -25,7 +25,7 @@ GENERAL
 		line-height: 25px;
 		font-size: 18px;
 		font-weight: 300;
-		color: #3c3c3c;
+  		color: #898989;
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -40,7 +40,7 @@ GENERAL
 		vertical-align: top;
 	 	width: 431px;
   		height: 55px;
-		font-size: 21px;
+		font-size: 19px;
   		font-weight: 300;
 		margin-right: -3px;
 		padding-left: 20px;
@@ -79,8 +79,8 @@ GENERAL
 		display: inline-block;
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 21px;
-		font-weight: 300;
+		font-size: 19px;
+		font-weight: 400;
 		line-height: 23px;
 		padding: 15px;
 		cursor: hand;
@@ -121,6 +121,7 @@ GENERAL
 	h3 {
 		text-transform: uppercase;
 		text-align: center;
+		color: #3c3c3c;
 		font-size: 18px;
 		font-weight: 300;
 		margin-top: 36px;
@@ -157,6 +158,7 @@ GENERAL
 
 	nav li {
 		display: inline-block;
+		color: #3c3c3c;
 		font-size: 18px;
 		font-family: 'Geomanist Regular', sans-serif;
 		padding: 0px 27px;
@@ -298,9 +300,9 @@ GENERAL
 	#punchline p {
 		text-align: center;
 		color: #fff;
-		font-size: 30px;
+		font-size: 26px;
 		line-height: 40px;
-		font-weight: 300;
+		font-weight: 400;
 		margin-top: 38px;
 	}
 
@@ -400,6 +402,7 @@ GENERAL
 	}
 
 	#features p {
+		line-height: 28px;
 		margin-top: 41px;
 	}
 
@@ -490,7 +493,7 @@ GENERAL
 
 	#functions {
 		padding-top: 80px;
-		padding-bottom: 11px;
+		padding-bottom: 16px;
 	}
 
 	#functions .wrapper {
@@ -529,6 +532,7 @@ GENERAL
 	}
 
 	#functions p {
+		line-height: 28px;
 		margin-top: 10px;
 		margin-bottom: 59px;
 	}
@@ -583,6 +587,7 @@ GENERAL
 	}
 
 	footer .logo p {
+		color: #898989;
 		font-size: 14px;
 		margin-top: 4px;
 	}
@@ -604,6 +609,11 @@ GENERAL
 	}
 
 	footer .container p {
+		font-size: 16px;
+	}
+
+	footer .container a {
+		color: #898989;
 		font-size: 16px;
 	}
 
@@ -1071,7 +1081,7 @@ SOCIETY
 		font-size: 24px;
 		font-weight: 400;
 		margin-top: 0;
-		margin-bottom: 3px;
+		margin-bottom: 11px;
 	}
 
 	#team a {
