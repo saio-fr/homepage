@@ -722,7 +722,7 @@ HOME
 	}
 
 	#features.home .container.second {
-		background-image: url(../images/knowledge-1-2.png);
+		background-image: url(../images/knowledge-1-2.jpg);
 	}
 
 	#features.home .container.third {
@@ -767,12 +767,12 @@ KNOWLEDGE BASE
 
 	/*images*/
 	#features.knowledge .container.first {
-		background-image: url(../images/knowledge-1-2.png);
+		background-image: url(../images/knowledge-1-2.jpg);
 		background-position-x: 450px; 
 	}
 
 	#features.knowledge .container.second {
-		background-image: url(../images/knowledge-1-2.png);
+		background-image: url(../images/knowledge-1-2.jpg);
 	}
 
 	#features.knowledge .container.third {
