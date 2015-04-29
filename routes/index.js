@@ -24,7 +24,7 @@ router.get('/live-chat', function(req, res, next) {
 
 //GET business intel page
 router.get('/business-intelligence', function(req, res, next) {
-  res.render('business-intelligence', { title: 'Business Intelligence SAIO - Comprenez les besoins et attentes de vos visiteurs pour mieux y répondre', description : 'Récupérez tous les informations pertinentes grâce à la Business Intellignece SAIO.'});
+  res.render('business-intelligence', { title: 'Business Intelligence SAIO - Comprenez les besoins et attentes de vos visiteurs pour mieux y répondre', description : 'Récupérez tous les informations pertinentes grâce à la Business Intelligence SAIO.'});
 });
 
 //GET society page

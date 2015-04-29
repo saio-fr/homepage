@@ -107,7 +107,7 @@ GENERAL
 		line-height:70px;
 		font-weight: 400;
 		color: #fff;
-		font-family: 'Geomanist Light', sans-serif;
+		font-family: 'Geomanist Regular', sans-serif;
 	}
 
 	h2 {
@@ -299,6 +299,7 @@ GENERAL
 
 	#punchline p {
 		text-align: center;
+		font-family: 'Geomanist Light', sans-serif;
 		color: #fff;
 		font-size: 26px;
 		line-height: 40px;
