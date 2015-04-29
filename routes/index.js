@@ -44,8 +44,7 @@ router.get('/mentions-legales', function(req, res, next) {
 
 //GET contact page
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact SAIO - Contactez-nous !', description : 'SAIO SAS - 44, rue Cauchy
-94110 Arcueil - Tél : +33 1 55 01 04 37 - E-mail : contact@saio.fr'});
+  res.render('contact', { title: 'Contact SAIO - Contactez-nous !', description : 'SAIO SAS - 44, rue Cauchy 94110 Arcueil - Tél : +33 1 55 01 04 37 - E-mail : contact@saio.fr'});
 });
 
 //send mail contact
