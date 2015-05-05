@@ -51,7 +51,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 //GET 404 page
-router.get('/404', function(req, res, next) {
+router.get('*',function(req, res, next) {
   res.render('404', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain});
 });
 

@@ -3,6 +3,6 @@
     "urlDomain": ""
   },
   "production": {
-    "urlDomain": "public/"
+    "urlDomain": "http://saio.fr/public/"
   }
 }

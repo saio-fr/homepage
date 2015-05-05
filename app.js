@@ -9,10 +9,7 @@ var mailer = require('express-mailer');
 
 var app = express();
 
-//environment config
 var config = require('./config.json')[app.get('env')];
-
-
 var routes = require('./routes/index')(app, config);
 var users = require('./routes/users');
 
@@ -42,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(config.urlPrefix, routes);
+app.use(config.urlDomain, routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
