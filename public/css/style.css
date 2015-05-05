@@ -580,7 +580,7 @@ GENERAL
 
 	footer .logo {
 		display: inline-block;
-		margin-right: 59px;
+		margin-right: 60px;
 	}
 
 	footer .logo img {
@@ -616,6 +616,15 @@ GENERAL
 	footer .container a {
 		color: #898989;
 		font-size: 16px;
+	}
+
+	footer .container.contact {
+		margin-right: 55px;
+	}
+
+	footer .social {
+		width: 65px;
+		margin-right: 0;
 	}
 
 

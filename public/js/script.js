@@ -54,7 +54,7 @@ $( document ).ready(function() {
     console.log(data);
 
     $.ajax({
-      url : 'http://90.85.8.147:3000/mail',
+      url : 'http://saio.fr/mail',
       type : 'POST',
       data : data,
       success : function(resp, status){

@@ -9,9 +9,12 @@ var mailer = require('express-mailer');
 
 var app = express();
 
-var routes = require('./routes/index')(app);
-var users = require('./routes/users');
+//environment config
+var config = require('./config.json')[app.get('env')];
 
+
+var routes = require('./routes/index')(app, config);
+var users = require('./routes/users');
 
 //mail configuration
 mailer.extend(app, {
@@ -39,7 +42,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use(config.urlPrefix, routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
