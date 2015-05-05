@@ -11,7 +11,6 @@ var app = express();
 
 var config = require('./config.json')[app.get('env')];
 var routes = require('./routes/index')(app, config);
-var users = require('./routes/users');
 
 //mail configuration
 mailer.extend(app, {
