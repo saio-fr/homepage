@@ -1,0 +1,12 @@
+{
+  "development": {
+    "redisPort": 3006,
+    "redisHost": "localhost",
+    "errorHandlerOptions": {"dumpExceptions": true, "showStack": true}
+  },
+  "production": {
+    "redisPort": 3006,
+    "redisHost": "localhost",
+    "errorHandlerOptions": {"dumpExceptions": false, "showStack": false}
+  }
+}
