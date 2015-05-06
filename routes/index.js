@@ -71,6 +71,7 @@ router.post('/mail', function(req, res, next){
           return;
         }
         res.send(true);
+        console.log('mail adress send');
     });
   }
   if (!!req.body.test) {
@@ -85,6 +86,7 @@ router.post('/mail', function(req, res, next){
           return;
         }
         res.send(true);
+        console.log('message send');
     });
   };
 });
