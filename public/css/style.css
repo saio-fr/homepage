@@ -1122,8 +1122,8 @@ SOCIETY
 	#team .github {
 		background-image: url(../images/github.svg); 
 		background-repeat: no-repeat;
-		background-size: 40px;
-		background-position-y: 5px;
+		background-size: 25px;
+		background-position: 7px;
 	}
 
 	#team a:hover {
