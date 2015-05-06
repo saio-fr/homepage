@@ -50,6 +50,12 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact SAIO - Contactez-nous !', description : 'SAIO SAS - 44, rue Cauchy 94110 Arcueil - Tél : +33 1 55 01 04 37 - E-mail : contact@saio.fr', url : config.urlDomain});
 });
 
+//GET login
+router.get('/login', function(req, res, next) {
+  res.redirect('http://lily.saio.fr/login');
+});
+
+
 //GET 404 page
 router.get('*',function(req, res, next) {
   res.render('404', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain});

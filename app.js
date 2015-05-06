@@ -11,15 +11,13 @@ var app = express();
 
 var config = require('./config.json')[app.get('env')];
 var routes = require('./routes/index')(app, config);
-var users = require('./routes/users');
 
 //mail configuration
 mailer.extend(app, {
   from: 'noreply@saio.fr',
-  host: 'smtp.saio.fr', 
+  host: '172.16.0.2',
   secureConnection: false,
-  port: 25,
-  transportMethod: 'SMTP'
+  port: 25
 });
 
 //view engine setup
@@ -39,8 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(config.urlDomain, routes);
-app.use('/users', users);
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
