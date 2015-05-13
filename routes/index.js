@@ -74,6 +74,8 @@ router.post('/mail', function(req, res, next){
         email: req.body.email
     };
 
+    console.log(mcReq);
+
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
         console.log(data);
@@ -102,6 +104,8 @@ router.post('/mail', function(req, res, next){
         id: 'b7ada5d04a',
         email: req.body.test
     };
+
+    console.log(mcReq);
 
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
