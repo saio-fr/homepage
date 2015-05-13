@@ -75,12 +75,7 @@ router.post('/mail', function(req, res, next){
         apikey: apiKey,
         id: listId,
         email: {email: req.body.email},
-        merge_vars: {
-            FNAME: 'subscriber-first-name',
-            LNAME: 'subscriber-last-name'
-        },
-        'double_optin': false,
-        'send_welcome': true
+        'double_optin': false
     }
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
@@ -90,7 +85,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'ncls.mitchell@gmail.com',
+        to: 'contact@saio.fr',
         subject: req.body.subject,
         email: 'Envoyé par : ' + req.body.email,
         message: req.body.message
@@ -110,12 +105,7 @@ router.post('/mail', function(req, res, next){
         apikey: apiKey,
         id: listId,
         email: {email: req.body.test},
-        merge_vars: {
-            FNAME: 'subscriber-first-name',
-            LNAME: 'subscriber-last-name'
-        },
-        'double_optin': false,
-        'send_welcome': true
+        'double_optin': false
     }
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
@@ -125,7 +115,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'ncls.mitchell@gmail.com',
+        to: 'contact@saio.fr',
         subject: 'Demande de test',
         email: 'Je souhaite tester vos solutions, voici mon e-mail : ' + req.body.test
       }, function (err) {
