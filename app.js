@@ -12,7 +12,7 @@ var app = express();
 var config = require('./config.json')[app.get('env')];
 var routes = require('./routes/index')(app, config);
 
-//mail configuration
+//set mail configuration
 mailer.extend(app, {
   from: 'noreply@saio.fr',
   host: '172.16.0.2',

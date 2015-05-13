@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var mcapi = require('../node_modules/mailchimp-api/mailchimp');
 
 var app;
 var config;
 
+//set MailChimp API
+mc = new mcapi.Mailchimp('79da343dd12c89bd64a54738b89c1260-us10');
 
 //GET home page
 router.get('/', function(req, res, next) {
@@ -65,6 +68,19 @@ router.get('*',function(req, res, next) {
 router.post('/mail', function(req, res, next){
 
   if (!!req.body.email && !!req.body.message) {
+
+    var mcReq = {
+        id: 'b7ada5d04a',
+        email: req.body.email
+    };
+
+    // submit subscription request to mail chimp
+    mc.lists.subscribe(mcReq, function(data) {
+        console.log(data);
+    }, function(err) {
+        console.log(err);
+    });
+
     app.mailer.send('mail', {
         to: 'contact@saio.fr',
         subject: req.body.subject,
@@ -81,6 +97,19 @@ router.post('/mail', function(req, res, next){
     });
   }
   if (!!req.body.test) {
+
+    var mcReq = {
+        id: 'b7ada5d04a',
+        email: req.body.test
+    };
+
+    // submit subscription request to mail chimp
+    mc.lists.subscribe(mcReq, function(data) {
+        console.log(data);
+    }, function(err) {
+        console.log(err);
+    });
+
     app.mailer.send('mail', {
         to: 'contact@saio.fr',
         subject: 'Demande de test',

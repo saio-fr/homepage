@@ -38,7 +38,7 @@ GENERAL
 	input, textarea {
 		display: inline-block;
 		vertical-align: top;
-	 	width: 431px;
+	 	width: 401px;
   		height: 55px;
 		font-size: 19px;
   		font-weight: 300;
@@ -60,7 +60,7 @@ GENERAL
 	.test {
 		position: relative;
   		z-index: 10;
-		width: 670px;
+		width: 640px;
 		margin: 52px auto 0px auto;
 	}
 
@@ -127,11 +127,8 @@ GENERAL
 		margin-top: 36px;
 	}
 
-	/*Navigation*/
 
-	.header_mobile {
-		display: none;
-	}
+	/*Navigation*/
 
 	nav {
 		position: fixed;
@@ -282,6 +279,18 @@ GENERAL
 		line-height: 40px;
 	}
 
+	.mobile-menu {
+		display: none;
+		width: 30px;
+		margin: -40px auto;
+		cursor: hand;
+		cursor: pointer;
+	}
+
+	.picto {
+		display: none;
+	}
+
 
 	/*Punchline*/
 
@@ -383,14 +392,14 @@ GENERAL
 	}
 
 	#features .left .block {
-		padding: 100px 80px 0px 120px;
+		padding: 100px 80px 0px 100px;
 		margin-right: 80px;
 	}
 
 	#features .right .block {
 		position: absolute;
 		right: 0;
-		padding: 120px 80px 0px 100px;
+		padding: 100px 80px 0px 100px;
 		margin-left: 80px;
 	}
 
@@ -497,19 +506,12 @@ GENERAL
 		padding-bottom: 16px;
 	}
 
-	#functions .wrapper {
-		width: 890px;
-	}
-
 	#functions .container {
-		display: inline-block;
+		display: block;
+		text-align: center;
 		vertical-align: top;
-		width: 405px;
-		margin-right: 76px;
-	}
-
-	#functions .last {
-		margin-right: 0px;
+		width: 420px;
+		margin: 0 auto;
 	}
 
 	#functions .rounded {
@@ -517,6 +519,7 @@ GENERAL
 		width: 100px;
 		height: 100px;
 		border-radius: 50px;
+		margin: 0 auto;
 	}
 
 	#functions img {
@@ -570,8 +573,7 @@ GENERAL
 	/*Footer*/
 
 	footer {
-		height: 245px;
-		padding-top: 60px;
+		padding: 80px 0;
 	}
 
 	footer .wrapper > div {
@@ -587,6 +589,10 @@ GENERAL
 		height: 33px;
 	}
 
+	footer .mixpanel {
+		margin-top: 65px;
+	}
+
 	footer .logo p {
 		color: #898989;
 		font-size: 14px;
@@ -595,12 +601,17 @@ GENERAL
 
 	footer .container {
 		display: inline-block;
+	}
+
+	footer .content {
+		display: inline-block;
+		vertical-align: top;
 		width: 160px;
 		line-height: 35px;
 		margin-right: 136px;
 	}
 
-	footer .container h3 {
+	footer .content h3 {
 		text-align: left;
 		text-transform: uppercase;
 		font-size: 16px;
@@ -609,22 +620,59 @@ GENERAL
 		margin-bottom: 10px;
 	}
 
-	footer .container p {
+	footer .content p {
 		font-size: 16px;
 	}
 
-	footer .container a {
+	footer a {
 		color: #898989;
 		font-size: 16px;
 	}
 
-	footer .container.contact {
-		margin-right: 55px;
+	footer .content.contact {
+		margin-right: 109px;
 	}
 
-	footer .social {
-		width: 65px;
+	footer .content.social {
+		width: 60px;
+		height: 60px;
 		margin-right: 0;
+		margin-top: 4px;
+	}
+
+	footer .content.social a {
+		vertical-align: top;
+		display: inline-block;
+		line-height: 14px;
+  		font-weight: 600;
+	}
+
+	footer .content.social a:hover {
+		opacity: 0.6;
+	}
+
+	footer .twitter {
+		vertical-align: top;
+		height: 15px;
+		margin-right: 31px;
+	}
+
+	footer .linkedin {
+		color: #0077b5;
+		font-family: 'Myriad Pro', sans-serif;
+		font-size: 22px;
+		margin-top: 10px;
+		margin-right: 23px;
+	}
+
+	footer .facebook {
+		color: #3c5a99;
+		font-size: 20px;
+	}
+
+	footer .viadeo {
+		height: 15px;
+		margin-top: 7px;
 	}
 
 
@@ -1101,7 +1149,6 @@ SOCIETY
 		color: #3c3c3c;
 		font-family: 'Myriad Pro', sans-serif;
 		font-size: 24px;
-		font-weight: 600;
 		line-height: 44px;
 		font-weight: 600;
 		background-color: #eeeeee;
@@ -1110,13 +1157,6 @@ SOCIETY
 		border-radius: 20px;
 		margin-top: 14px;
 		margin-right: 17px;
-	}
-
-	#team .viadeo {
-		background-image: url(../images/viadeo.svg); 
-		background-repeat: no-repeat;
-		background-size: 20px;
-		background-position: 10px 8px;
 	}
 
 	#team .github {
