@@ -75,6 +75,10 @@ router.post('/mail', function(req, res, next){
         apikey: apiKey,
         id: listId,
         email: {email: req.body.email},
+        merge_vars: {
+            FNAME: 'subscriber-first-name',
+            LNAME: 'subscriber-last-name'
+        },
         'double_optin': false,
         'send_welcome': true
     }
@@ -106,6 +110,10 @@ router.post('/mail', function(req, res, next){
         apikey: apiKey,
         id: listId,
         email: {email: req.body.test},
+        merge_vars: {
+            FNAME: 'subscriber-first-name',
+            LNAME: 'subscriber-last-name'
+        },
         'double_optin': false,
         'send_welcome': true
     }
