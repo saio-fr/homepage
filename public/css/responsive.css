@@ -11,6 +11,16 @@ GENERAL
 		width: 860px;
 	}
 
+	#functions .container {
+		width: 405px;
+		margin-left: 0;
+		margin-right: 46px;
+	}
+
+	#functions .container.last {
+		margin-right: 0;
+	}
+
 }
 
 
@@ -21,6 +31,15 @@ GENERAL
 	.wrapper {
 		width: 640px;
 	}
+
+	#functions .container {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#functions .container.last {
+		margin: 0 auto;
+	}	
 
 }
 
@@ -41,7 +60,7 @@ GENERAL
 		display: none;
 	}
 
-	#features .short .block {
+	#features .block {
 		width: 260px;
 	}
 
@@ -79,7 +98,7 @@ NAV
 
 @media screen and (max-width: 1200px) {
 
-	nav .wrapper {
+	.solutions-menu .wrapper {
 		width: 640px;
 	}
 
@@ -137,6 +156,10 @@ NAV
 	.solutions-menu {
 		height: 430px;
 		top: -360px;
+	}
+
+	.solutions-menu .wrapper {
+		width: 320px;
 	}
 
 	.solutions-menu a {

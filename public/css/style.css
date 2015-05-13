@@ -363,19 +363,11 @@ GENERAL
 		background-position-y: 40px; 
 	}
 
-	#features .container.short.left {
+	#features .container.left {
 		background-position-x: 640px;
 	}
 
-	#features .container.long.left {
-		background-position-x: 720px;
-	}
-
-	#features .container.short.right {
-		background-position-x: 80px;
-	}
-
-	#features .container.long.right {
+	#features .container.right {
 		background-position-x: 80px;
 	}
 
@@ -384,6 +376,7 @@ GENERAL
 		vertical-align: top;
 		border-top: 5px solid #6ac9f6;
 		background-color: #fff;
+		width: 360px;
 		height: 620px;
 		margin-bottom: 80px;
 	}
@@ -398,14 +391,6 @@ GENERAL
 		right: 0;
 		padding: 100px 80px 0px 100px;
 		margin-left: 80px;
-	}
-
-	#features .short .block {
-		width: 360px;
-	}
-
-	#features .long .block {
-		width: 440px;
 	}
 
 	#features p {
@@ -504,11 +489,11 @@ GENERAL
 	}
 
 	#functions .container {
-		display: block;
+		display: inline-block;
 		text-align: center;
 		vertical-align: top;
 		width: 420px;
-		margin: 0 auto;
+		margin: 0 79px;
 	}
 
 	#functions .rounded {
