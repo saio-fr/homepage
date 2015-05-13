@@ -91,11 +91,11 @@ $( document ).ready(function() {
     if (width < 700) {
 
       if (produits_open==false) {
-        $(".solutions-menu").animate({'top': '+=340px'}, 500);
+        $(".solutions-menu").animate({'top': '+=430px'}, 500);
         produits_open=true;
       }
       else {
-        $(".solutions-menu").animate({'top': '-=340px'}, 500);
+        $(".solutions-menu").animate({'top': '-=430px'}, 500);
         produits_open=false;
       }
     }

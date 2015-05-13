@@ -267,8 +267,6 @@ GENERAL
 	}
 
 	.solutions-menu h3 {
-		text-align: center;
-		text-transform: uppercase;
 		font-weight: 400;
 		margin-top: 15px;
 	}
@@ -279,15 +277,14 @@ GENERAL
 		line-height: 40px;
 	}
 
-	.mobile-menu {
+	nav .mobile-menu {
 		display: none;
 		width: 30px;
-		margin: -40px auto;
 		cursor: hand;
 		cursor: pointer;
 	}
 
-	.picto {
+	nav .picto {
 		display: none;
 	}
 

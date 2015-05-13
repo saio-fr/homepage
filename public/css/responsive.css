@@ -71,7 +71,7 @@ GENERAL
 
 
 /**************
-HEADER
+NAV
 **************/
 
 
@@ -79,7 +79,7 @@ HEADER
 
 @media screen and (max-width: 1200px) {
 
-	header .wrapper {
+	nav .wrapper {
 		width: 640px;
 	}
 
@@ -99,21 +99,20 @@ HEADER
 
 @media screen and (max-width: 900px) {
 
-	header ul {
+	nav ul {
 		display: none;
 	}
 
-	.mobile-menu {
+	nav .mobile-menu {
 		display: block;
 	}
 
-	#features .short .block {
-		width: auto;
+	nav .logo {
+		width: 105px;
+		display: block;
+		margin: -33px auto;
 	}
 
-	#features .long .block {
-		width: auto;
-	}
 
 }
 
@@ -122,33 +121,41 @@ HEADER
 
 @media screen and (max-width: 700px) {
 
-	header .wrapper {
+	nav .wrapper {
 		width: 320px;
 	}
 
-	header .logo {
+	nav .logo {
 		display: none;
 	}
 
-	header .picto {
+	nav .picto {
 		display: block;
-	}
-
-	.mobile-menu {
-		margin-top: -34px;
+		margin: -33px auto;
 	}
 
 	.solutions-menu {
-		height: 340px;
-		top: -270px;
-	}
-
-	.solutions-menu h3, .solutions-menu p {
-		display: none;
+		height: 430px;
+		top: -360px;
 	}
 
 	.solutions-menu a {
 		width: 160px;
+		padding: 30px 0;
+	}
+
+	.solutions-menu a.live-chat {
+		padding-bottom: 55px;
+	}
+
+	.solutions-menu h3 {
+		font-size: 14px;
+		width: 140px;
+		margin: 15px auto;
+	}
+
+	.solutions-menu p {
+		display: none;
 	}
 
 }
