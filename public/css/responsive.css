@@ -1,0 +1,308 @@
+/**************
+GENERAL
+**************/
+
+
+/*Small screens*/
+
+@media screen and (max-width: 1200px) {
+
+	.wrapper {
+		width: 860px;
+	}
+
+}
+
+
+/*Tablets*/
+
+@media screen and (max-width: 900px) {
+
+	.wrapper {
+		width: 640px;
+	}
+
+}
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	.wrapper {
+		width: 320px;
+	}
+
+	#icons .icon {
+		margin: 60px 80px;
+	}
+
+	.test {
+		display: none;
+	}
+
+	#features .short .block {
+		width: 260px;
+	}
+
+	#features .left .block {
+		padding: 100px 60px 0px 60px;
+		margin-right: 0;
+	}
+
+	#features .right .block {
+		padding: 100px 60px 0px 60px;
+		margin-left: 0;
+	}
+
+	#functions .container {
+		width: 320px;
+	}
+
+	#action {
+		display: none;
+	}
+
+	footer {
+		border-top: 1px solid #eeeeee;
+	}
+
+}
+
+
+/**************
+HEADER
+**************/
+
+
+/*Small screens*/
+
+@media screen and (max-width: 1200px) {
+
+	header .wrapper {
+		width: 640px;
+	}
+
+	.solutions-menu {
+		height: 500px;
+		top: -430px;
+	}
+
+	.solutions-menu a {
+		width: 320px;
+	}
+
+}
+
+
+/*Tablets*/
+
+@media screen and (max-width: 900px) {
+
+	header ul {
+		display: none;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	#features .short .block {
+		width: auto;
+	}
+
+	#features .long .block {
+		width: auto;
+	}
+
+}
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	header .wrapper {
+		width: 320px;
+	}
+
+	header .logo {
+		display: none;
+	}
+
+	header .picto {
+		display: block;
+	}
+
+	.mobile-menu {
+		margin-top: -34px;
+	}
+
+	.solutions-menu {
+		height: 340px;
+		top: -270px;
+	}
+
+	.solutions-menu h3, .solutions-menu p {
+		display: none;
+	}
+
+	.solutions-menu a {
+		width: 160px;
+	}
+
+}
+
+
+/**************
+FOOTER
+**************/
+
+
+/*Small screens*/
+
+@media screen and (max-width: 1200px) {
+
+	footer .container {
+		width: 460px;
+	}
+
+	footer .content.contact {
+		margin-top: 25px;
+		margin-right: 142px;
+	}
+
+	footer .content.more {
+		margin-right: 0;
+	}
+
+	footer .content.social {
+		margin-top: 30px;
+	}
+
+
+}
+
+
+/*Tablets*/
+
+@media screen and (max-width: 900px) {
+
+	footer .container {
+		width: 400px;
+	}
+
+	footer .content {
+		margin-right: 76px;
+	}
+
+	footer .content.contact {
+		margin-right: 76px;
+	}
+
+}
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	footer .container {
+		width: 160px;
+	}
+
+	footer .content.solutions {
+		margin-right: 0;
+	}
+
+	footer .content.more {
+		margin-top: 25px; 
+	}
+
+	footer .content.contact {
+		margin-right: 0;
+	}
+
+	footer .logo {
+		margin-right: 25px;
+	}
+
+	footer .content.social {
+		width: 160px;
+		height: 160px;
+	}
+
+	footer .content.social a {
+		line-height: 30px;
+	}
+
+	footer .twitter {
+		height: 30px;
+		margin-right: 40px;
+	}
+
+	footer .linkedin {
+		font-size: 44px;
+		margin-top: 40px;
+		margin-right: 32px;
+	}
+
+	footer .facebook {
+		font-size: 40px;
+	}
+
+	footer .viadeo {
+		height: 30px;
+		margin-top: 36px;
+	}
+
+}
+
+
+/**************
+HOME
+**************/
+
+
+/*Small screens*/
+
+@media screen and (max-width: 1200px) {
+
+	#packs .wrapper {
+		width: 596px;
+	}
+
+	#packs .pack {
+		margin: 0 18px;
+	}
+
+	#packs .pack:nth-child(1), #packs .pack:nth-child(2) {
+		margin-bottom: 40px;
+	}
+
+
+}
+
+
+/*Tablets*/
+
+@media screen and (max-width: 900px) {
+
+
+
+}
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	#packs .wrapper {
+		width: 296px;
+	}
+
+	#packs .pack:nth-child(3), #packs .pack:nth-child(4) {
+		margin-bottom: 40px;
+	}
+
+}
