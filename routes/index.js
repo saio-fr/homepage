@@ -6,7 +6,9 @@ var app;
 var config;
 
 //set MailChimp API
-mc = new mcapi.Mailchimp('79da343dd12c89bd64a54738b89c1260-us10');
+var apiKey = '79da343dd12c89bd64a54738b89c1260-us10';
+var listId = 'b7ada5d04a';
+var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 
 //GET home page
 router.get('/', function(req, res, next) {
@@ -70,17 +72,17 @@ router.post('/mail', function(req, res, next){
   if (!!req.body.email && !!req.body.message) {
 
     var mcReq = {
-        id: 'b7ada5d04a',
-        email: req.body.email
-    };
-
-    console.log(mcReq);
-
+        apikey: apiKey,
+        id: listId,
+        email: {email: req.body.email},
+        'double_optin': false,
+        'send_welcome': true
+    }
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
         console.log(data);
-    }, function(err) {
-        console.log(err);
+    }, function(error) {
+        console.log(error);
     });
 
     app.mailer.send('mail', {
@@ -101,17 +103,17 @@ router.post('/mail', function(req, res, next){
   if (!!req.body.test) {
 
     var mcReq = {
-        id: 'b7ada5d04a',
-        email: req.body.test
-    };
-
-    console.log(mcReq);
-
+        apikey: apiKey,
+        id: listId,
+        email: {email: req.body.test},
+        'double_optin': false,
+        'send_welcome': true
+    }
     // submit subscription request to mail chimp
     mc.lists.subscribe(mcReq, function(data) {
         console.log(data);
-    }, function(err) {
-        console.log(err);
+    }, function(error) {
+        console.log(error);
     });
 
     app.mailer.send('mail', {
