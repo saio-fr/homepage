@@ -86,7 +86,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'contact@saio.fr',
+        to: 'ncls.mitchell@gmail.com',
         subject: req.body.subject,
         email: 'Envoyé par : ' + req.body.email,
         message: req.body.message
@@ -117,7 +117,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'contact@saio.fr',
+        to: 'ncls.mitchell@gmail.com',
         subject: 'Demande de test',
         email: 'Je souhaite tester vos solutions, voici mon e-mail : ' + req.body.test
       }, function (err) {
