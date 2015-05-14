@@ -336,3 +336,27 @@ HOME
 	}
 
 }
+
+
+/**************
+BUSINESS INTEL
+**************/
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	#features .charts {
+	  width: 320px;
+	}
+
+	#features .chart:nth-child(4), #features .chart:nth-child(5), #features .chart:nth-child(6), #features .chart:nth-child(7), #features .chart:nth-child(8) {
+		display: none;
+	}
+
+	#features .capitalize p {
+		width: 320px;
+	}
+
+}

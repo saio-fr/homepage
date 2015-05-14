@@ -453,8 +453,8 @@ GENERAL
 	#features .container-last {
 		background-repeat: no-repeat;
 		background-position: 740px 120px;
-		height: 518px;
-		padding-top: 122px;
+		padding-top: 110px;
+		padding-bottom: 80px;
 	}
 
 	#features .capitalize {
