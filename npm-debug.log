@@ -1,35 +1,268 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'jscs' ]
 2 info using npm@2.7.4
 3 info using node@v0.12.2
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart homepage@0.0.0
-6 info start homepage@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info homepage@0.0.0 Failed to exec start script
-9 verbose stack Error: homepage@0.0.0 start: `node ./bin/www`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
-9 verbose stack     at EventEmitter.emit (events.js:110:17)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
-9 verbose stack     at ChildProcess.emit (events.js:110:17)
-9 verbose stack     at maybeClose (child_process.js:1015:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
-10 verbose pkgid homepage@0.0.0
-11 verbose cwd /Users/nclsmitchell/Web/homepage
-12 error Darwin 14.1.0
-13 error argv "node" "/usr/local/bin/npm" "start"
-14 error node v0.12.2
-15 error npm  v2.7.4
-16 error code ELIFECYCLE
-17 error homepage@0.0.0 start: `node ./bin/www`
-17 error Exit status 1
-18 error Failed at the homepage@0.0.0 start script 'node ./bin/www'.
-18 error This is most likely a problem with the homepage package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node ./bin/www
-18 error You can get their info via:
-18 error     npm owner ls homepage
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 silly cache add args [ 'jscs', null ]
+5 verbose cache add spec jscs
+6 silly cache add parsed spec { raw: 'jscs',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'jscs',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed jscs@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'jscs', range: '*', hasData: false }
+11 silly mapToRegistry name jscs
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/jscs
+15 verbose addNameRange registry:https://registry.npmjs.org/jscs not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/jscs
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 10:20:21
+19 verbose request id 022fd13294ae989a
+20 http request GET https://registry.npmjs.org/jscs
+21 http 200 https://registry.npmjs.org/jscs
+22 silly get cb [ 200,
+22 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly get     etag: '"3DAUV2NBCRQPDFUO5JXF3RPN1"',
+22 silly get     'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=60',
+22 silly get     'content-length': '120058',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     date: 'Fri, 15 May 2015 08:20:21 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '0',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-lcy1132-LCY',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1431678021.318133,VS0,VE89',
+22 silly get     vary: 'Accept' } ]
+23 verbose get saving jscs to /Users/nclsmitchell/.npm/registry.npmjs.org/jscs/.cache.json
+24 silly addNameRange number 2 { name: 'jscs', range: '*', hasData: true }
+25 silly addNameRange versions [ 'jscs',
+25 silly addNameRange   [ '0.0.1',
+25 silly addNameRange     '0.0.2',
+25 silly addNameRange     '0.0.3',
+25 silly addNameRange     '0.0.4',
+25 silly addNameRange     '0.0.5',
+25 silly addNameRange     '0.0.6',
+25 silly addNameRange     '0.0.7',
+25 silly addNameRange     '0.0.8',
+25 silly addNameRange     '0.0.9',
+25 silly addNameRange     '0.0.10',
+25 silly addNameRange     '0.0.11',
+25 silly addNameRange     '0.0.12',
+25 silly addNameRange     '1.0.0',
+25 silly addNameRange     '1.0.1',
+25 silly addNameRange     '1.0.2',
+25 silly addNameRange     '1.0.3',
+25 silly addNameRange     '1.0.4',
+25 silly addNameRange     '1.0.5',
+25 silly addNameRange     '1.0.6',
+25 silly addNameRange     '1.0.7',
+25 silly addNameRange     '1.0.8',
+25 silly addNameRange     '1.0.10',
+25 silly addNameRange     '1.0.11',
+25 silly addNameRange     '1.0.12',
+25 silly addNameRange     '1.0.13',
+25 silly addNameRange     '1.0.14',
+25 silly addNameRange     '1.0.15',
+25 silly addNameRange     '1.1.0',
+25 silly addNameRange     '1.2.0',
+25 silly addNameRange     '1.2.1',
+25 silly addNameRange     '1.2.2',
+25 silly addNameRange     '1.2.3',
+25 silly addNameRange     '1.2.4',
+25 silly addNameRange     '1.3.0',
+25 silly addNameRange     '1.4.0',
+25 silly addNameRange     '1.4.1',
+25 silly addNameRange     '1.4.2',
+25 silly addNameRange     '1.4.3',
+25 silly addNameRange     '1.4.4',
+25 silly addNameRange     '1.4.5',
+25 silly addNameRange     '1.5.1',
+25 silly addNameRange     '1.5.2',
+25 silly addNameRange     '1.5.3',
+25 silly addNameRange     '1.5.4',
+25 silly addNameRange     '1.5.6',
+25 silly addNameRange     '1.5.7',
+25 silly addNameRange     '1.5.8',
+25 silly addNameRange     '1.5.9',
+25 silly addNameRange     '1.6.0',
+25 silly addNameRange     '1.6.1',
+25 silly addNameRange     '1.6.2',
+25 silly addNameRange     '1.7.0',
+25 silly addNameRange     '1.7.1',
+25 silly addNameRange     '1.7.2',
+25 silly addNameRange     '1.7.3',
+25 silly addNameRange     '1.8.0',
+25 silly addNameRange     '1.8.1',
+25 silly addNameRange     '1.9.0',
+25 silly addNameRange     '1.10.0',
+25 silly addNameRange     '1.11.0',
+25 silly addNameRange     '1.11.1',
+25 silly addNameRange     '1.11.2',
+25 silly addNameRange     '1.11.3',
+25 silly addNameRange     '1.12.0',
+25 silly addNameRange     '1.13.0',
+25 silly addNameRange     '1.13.1' ] ]
+26 verbose addNamed jscs@1.13.1
+27 silly addNamed semver.valid 1.13.1
+28 silly addNamed semver.validRange 1.13.1
+29 silly mapToRegistry name jscs
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/jscs
+33 verbose addRemoteTarball https://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz',
+34 verbose addRemoteTarball   '7dd46e186f0fce0712cd031eacc0a45ef7dcfeb0' ]
+35 info retry fetch attempt 1 at 10:20:22
+36 info attempt registry request try #1 at 10:20:22
+37 http fetch GET https://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz
+38 http fetch 200 https://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz
+39 silly fetchAndShaCheck shasum 7dd46e186f0fce0712cd031eacc0a45ef7dcfeb0
+40 verbose addTmpTarball /var/folders/h4/91gbp2kj4g3_csy01tvnb2040000gn/T/npm-15388-0433e6ff/registry.npmjs.org/jscs/-/jscs-1.13.1.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for jscs@1.13.1
+42 silly cache afterAdd jscs@1.13.1
+43 verbose afterAdd /Users/nclsmitchell/.npm/jscs/1.13.1/package/package.json not in flight; writing
+44 verbose afterAdd /Users/nclsmitchell/.npm/jscs/1.13.1/package/package.json written
+45 silly install resolved [ { author: { name: 'Marat Dulin', email: 'mdevils@yandex.ru' },
+45 silly install resolved     description: 'JavaScript Code Style',
+45 silly install resolved     name: 'jscs',
+45 silly install resolved     version: '1.13.1',
+45 silly install resolved     main: 'lib/checker',
+45 silly install resolved     homepage: 'https://github.com/jscs-dev/node-jscs',
+45 silly install resolved     keywords:
+45 silly install resolved      [ 'code style',
+45 silly install resolved        'formatter',
+45 silly install resolved        'lint',
+45 silly install resolved        'linter',
+45 silly install resolved        'style guide',
+45 silly install resolved        'validate' ],
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     repository: { type: 'git', url: 'https://github.com/jscs-dev/node-jscs' },
+45 silly install resolved     bugs: { url: 'https://github.com/jscs-dev/node-jscs/issues' },
+45 silly install resolved     contributors:
+45 silly install resolved      [ [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object] ],
+45 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+45 silly install resolved     engines: { node: '>= 0.10.0' },
+45 silly install resolved     dependencies:
+45 silly install resolved      { chalk: '~1.0.0',
+45 silly install resolved        'cli-table': '~0.3.1',
+45 silly install resolved        commander: '~2.6.0',
+45 silly install resolved        esprima: '^1.2.5',
+45 silly install resolved        'esprima-harmony-jscs': '1.1.0-bin',
+45 silly install resolved        estraverse: '^1.9.3',
+45 silly install resolved        exit: '~0.1.2',
+45 silly install resolved        glob: '^5.0.1',
+45 silly install resolved        'lodash.assign': '~3.0.0',
+45 silly install resolved        minimatch: '~2.0.1',
+45 silly install resolved        pathval: '~0.1.1',
+45 silly install resolved        prompt: '~0.2.14',
+45 silly install resolved        'strip-json-comments': '~1.0.2',
+45 silly install resolved        vow: '~0.4.8',
+45 silly install resolved        'vow-fs': '~0.3.4',
+45 silly install resolved        xmlbuilder: '^2.6.1' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { browserify: '^9.0.3',
+45 silly install resolved        coveralls: '~2.11.2',
+45 silly install resolved        'has-ansi': '~1.0.1',
+45 silly install resolved        jshint: '~2.6.0',
+45 silly install resolved        mocha: '^2.2.0',
+45 silly install resolved        regenerate: '~1.2.1',
+45 silly install resolved        rewire: '^2.3.1',
+45 silly install resolved        sinon: '^1.13.0',
+45 silly install resolved        'unicode-7.0.0': '~0.1.5',
+45 silly install resolved        'unit-coverage': '^3.4.0',
+45 silly install resolved        xml2js: '~0.4.4' },
+45 silly install resolved     bin: { jscs: './bin/jscs' },
+45 silly install resolved     'unit-coverage': { common: [Object] },
+45 silly install resolved     scripts:
+45 silly install resolved      { lint: 'jshint . && node bin/jscs lib test bin publish',
+45 silly install resolved        test: 'npm run lint && mocha --color',
+45 silly install resolved        coverage: 'unit-coverage run -p common',
+45 silly install resolved        'coverage-html': 'unit-coverage run -p common -r html -o coverage.html',
+45 silly install resolved        browserify: 'browserify --standalone JscsStringChecker lib/string-checker.js -o jscs-browser.js',
+45 silly install resolved        changelog: 'git log `git describe --tags --abbrev=0`..HEAD --pretty=format:\' * %s (%an)\' | grep -v \'Merge pull request\'',
+45 silly install resolved        release: 'node publish/prepublish && npm test && npm publish',
+45 silly install resolved        postpublish: 'node publish/postpublish',
+45 silly install resolved        travis: 'npm run test && unit-coverage run -p common -r lcov -o out.lcov && cat out.lcov | coveralls' },
+45 silly install resolved     files:
+45 silly install resolved      [ 'bin',
+45 silly install resolved        'lib',
+45 silly install resolved        'patterns',
+45 silly install resolved        'presets',
+45 silly install resolved        'LICENSE',
+45 silly install resolved        'jscs-browser.js' ],
+45 silly install resolved     gitHead: '99e77ea84183041dc20373e4d33b8af430f668c9',
+45 silly install resolved     _id: 'jscs@1.13.1',
+45 silly install resolved     _shasum: '7dd46e186f0fce0712cd031eacc0a45ef7dcfeb0',
+45 silly install resolved     _from: 'jscs@*',
+45 silly install resolved     _npmVersion: '2.2.0',
+45 silly install resolved     _nodeVersion: '0.10.33',
+45 silly install resolved     _npmUser: { name: 'markelog', email: 'markelog@gmail.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '7dd46e186f0fce0712cd031eacc0a45ef7dcfeb0',
+45 silly install resolved        tarball: 'http://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/jscs/-/jscs-1.13.1.tgz' } ]
+46 info install jscs@1.13.1 into /usr/local/lib
+47 info installOne jscs@1.13.1
+48 verbose installOne of jscs to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/nclsmitchell/.npm/_locks/jscs-6edbd6e3f0cd298d.lock for /usr/local/lib/node_modules/jscs
+50 silly install write writing jscs 1.13.1 to /usr/local/lib/node_modules/jscs
+51 silly cache addNamed cb jscs@1.13.1
+52 verbose unbuild lib/node_modules/jscs
+53 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged from base /usr/local
+54 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
+55 verbose tar unpack /Users/nclsmitchell/.npm/jscs/1.13.1/package.tgz
+56 verbose tar unpacking to /usr/local/lib/node_modules/jscs
+57 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged
+58 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
+59 silly gunzTarPerm modes [ '755', '644' ]
+60 error tar.unpack untar error /Users/nclsmitchell/.npm/jscs/1.13.1/package.tgz
+61 verbose unlock done using /Users/nclsmitchell/.npm/_locks/jscs-6edbd6e3f0cd298d.lock for /usr/local/lib/node_modules/jscs
+62 verbose fstream_path /usr/local/lib/node_modules/jscs
+63 verbose fstream_type Directory
+64 verbose fstream_class DirWriter
+65 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/jscs'
+65 verbose stack     at Error (native)
+66 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+66 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+66 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+67 verbose cwd /Users/nclsmitchell/Web/homepage
+68 error Darwin 14.1.0
+69 error argv "node" "/usr/local/bin/npm" "install" "-g" "jscs"
+70 error node v0.12.2
+71 error npm  v2.7.4
+72 error path /usr/local/lib/node_modules/jscs
+73 error code EACCES
+74 error errno -13
+75 error Error: EACCES, mkdir '/usr/local/lib/node_modules/jscs'
+75 error     at Error (native)
+75 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/jscs']
+75 error   errno: -13,
+75 error   code: 'EACCES',
+75 error   path: '/usr/local/lib/node_modules/jscs',
+75 error   fstream_type: 'Directory',
+75 error   fstream_path: '/usr/local/lib/node_modules/jscs',
+75 error   fstream_class: 'DirWriter',
+75 error   fstream_stack:
+75 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+75 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+75 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+76 error Please try running this command again as root/Administrator.
+77 verbose exit [ -13, true ]
+78 verbose unbuild lib/node_modules/jscs
+79 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged from base /usr/local
+80 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
