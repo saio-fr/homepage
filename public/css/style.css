@@ -358,7 +358,6 @@ GENERAL
 	}
 
 	#features .container {
-		height: 810px;
 		background-repeat: no-repeat;
 		background-position-y: 40px; 
 	}
@@ -377,21 +376,18 @@ GENERAL
 		border-top: 5px solid #6ac9f6;
 		background-color: #fff;
 		width: 360px;
-		height: 620px;
 		margin-bottom: 80px;
 	}
 
 	#features .left .block {
-		padding: 100px 80px 0px 100px;
+		padding: 100px 80px 233px 100px;
 		margin-right: 80px;
 	}
 
 	#features .right .block {
-		position: absolute;
-		right: 0;
-		padding: 100px 80px 0px 100px;
-		margin-left: 80px;
-	}
+		padding: 100px 80px 233px 100px;
+		margin-left: calc(100% - 540px);
+  	}
 
 	#features p {
 		line-height: 28px;

@@ -77,12 +77,12 @@ GENERAL
 	}
 
 	#features .left .block {
-		padding: 100px 60px 0px 60px;
+		padding: 100px 60px 113px 60px;
 		margin-right: 0;
 	}
 
 	#features .right .block {
-		padding: 100px 60px 0px 60px;
+		padding: 100px 60px 113px 60px;
 		margin-left: 0;
 	}
 
@@ -96,6 +96,28 @@ GENERAL
 
 	footer {
 		border-top: 1px solid #eeeeee;
+	}
+
+}
+
+/*Small phones*/
+
+@media screen and (max-width: 380px) {
+
+	.wrapper {
+		width: 260px;
+	}
+
+	#icons .wrapper {
+		width: 260px;
+	}
+
+	#icons .icon {
+		margin: 60px 50px;
+	}
+
+	#functions .container {
+		width: 260px;
 	}
 
 }
@@ -195,6 +217,16 @@ NAV
 
 }
 
+/*Small phones*/
+
+@media screen and (max-width: 380px) {
+
+	nav .wrapper {
+		width: 260px;
+	}
+
+}
+
 
 /**************
 FOOTER
@@ -222,9 +254,7 @@ FOOTER
 		margin-top: 30px;
 	}
 
-
 }
-
 
 /*Tablets*/
 
@@ -243,7 +273,6 @@ FOOTER
 	}
 
 }
-
 
 /*Phones*/
 
@@ -325,7 +354,6 @@ HOME
 
 }
 
-
 /*Phones*/
 
 @media screen and (max-width: 700px) {
@@ -336,6 +364,20 @@ HOME
 
 	#packs .pack:nth-child(3), #packs .pack:nth-child(4) {
 		margin-bottom: 40px;
+	}
+
+}
+
+/*Small phones*/
+
+@media screen and (max-width: 380px) {
+
+	#packs .wrapper {
+		width: 260px;
+	}
+
+	#packs .pack {
+		margin: 0;
 	}
 
 }
@@ -384,6 +426,24 @@ BUSINESS INTEL
 
 	#features .capitalize p {
 		width: 320px;
+	}
+
+}
+
+/*Small phones*/
+
+@media screen and (max-width: 380px) {
+
+	#features .charts {
+		width: 260px;
+	}
+
+	#features .capitalize {
+		width: 260px;
+	}
+
+	#features .capitalize p {
+		width: 260px;
 	}
 
 }
