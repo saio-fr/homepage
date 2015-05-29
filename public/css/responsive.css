@@ -73,7 +73,7 @@ GENERAL
 	}
 
 	#features .block {
-		width: 260px;
+		width: calc(100% - 120px);
 	}
 
 	#features .left .block {
