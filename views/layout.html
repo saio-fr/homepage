@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<title>{{ title }}</title>
-	<!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="dist/html5shiv.js"></script>
-            <![endif]-->
-            <link rel="icon" type="image/png" href="{{ url }}images/favicon_saio.png">
-            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-            <link rel="stylesheet" href="{{ url }}css/reset.css" type="text/css">
-            <link rel="stylesheet" href="{{ url }}css/style.css" type="text/css"><link rel="stylesheet" href="{{ url }}css/responsive.css" type="text/css">
-		<!--[if IE]>
-    	<link type="text/css" rel="stylesheet" href="{{ url }}css/style-ie.css" />
-    	<![endif]-->
+  <head>
+  	<meta charset="utf-8">
+  	<title>{{ title }}</title>
+    <link rel="icon" type="image/png" href="{{ url }}images/favicon_saio.png">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{{ url }}css/reset.css" type="text/css">
+    <link rel="stylesheet" href="{{ url }}css/style.css" type="text/css"><link rel="stylesheet" href="{{ url }}css/responsive.css" type="text/css">
+    <!--[if lt IE 9]>
+      <link type="text/css" rel="stylesheet" href="{{ url }}css/style-ie.css" />
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="dist/html5shiv.js"></script>
+    <![endif]-->
 		<meta name="viewport" content="width=device-width, maximum-scale=1" />
   	<meta name="keywords" content="SAIO, base de connaissances, chat automatique, live chat, business intelligence, agent virtuel"/>
   	<meta name="description" content="{{ description }}"/>
   	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="7AxPnAvI-RWo4NZ48XL0uW6mK5zEKYk71-6fSOCcbmo" />
 
-    </head>
+  </head>
 
-    <body>
+  <body>
 
         {% include './include/header.html' %}
 
@@ -31,40 +29,35 @@
     	
         {% include './include/footer.html' %}
 
-<script src="{{ url }}js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="{{ url }}js/script.js"></script>
-<script type="text/javascript">
-(function() {
-  var licence = '54b7873b88c42';
-  var lily = document.createElement('script'); lily.type = 'text/javascript'; lily.async = true;
-  lily.src = 'http://saio.fr/app/tracking/' + licence;
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lily, s);
-})();
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script src="{{ url }}js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="{{ url }}js/script.js"></script>
+    <script type="text/javascript" src="{{ url }}js/modernizr.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+      var licence = '54b7873b88c42';
+      var lily = document.createElement('script'); lily.type = 'text/javascript'; lily.async = true;
+      lily.src = 'http://saio.fr/app/tracking/' + licence;
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lily, s);
+    })();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-42907567-1', 'saio.fr');
-  ga('send', 'pageview');
-</script>
-<script type="text/javascript">
-  (function(d,s,i,r) {
-    if (d.getElementById(i)){return;}
-    var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-    n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/552529.js';
-    e.parentNode.insertBefore(n, e);
-  })(document,"script","hs-analytics",300000);
-</script>
-<!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-<![endif]-->
+      ga('create', 'UA-42907567-1', 'saio.fr');
+      ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/552529.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+    </script>
 
-
-
-
-</body>
+  </body>
 
 </html>
