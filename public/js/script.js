@@ -108,12 +108,16 @@ $( document ).ready(function() {
     e.preventDefault();
 
     var email = $('input[name="email"]').val(),
+    lname = $('input[name="lname"]').val(),
+    company = $('input[name="company"]').val(),
     subject = $('select[name="subject"]').val(),
     message = $('textarea[name="message"]').val(),
     test = $('input[name="test-header"]').val() ||
       $('input[name="test-footer"]').val();
     data = {
       email: email,
+      lname: lname,
+      company: company,
       subject: subject,
       message: message,
       test: test
@@ -129,8 +133,10 @@ $( document ).ready(function() {
         $(".button.mail").addClass("send");
         $(".button.mail").text("Envoyé");
         $(".button.mail").attr("disabled", "disabled");
+        console.log('success');
       },          
       error : function(result, status, error){
+        console.log('error');
       },
       complete : function(result, status){
       }

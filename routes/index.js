@@ -40,6 +40,11 @@ router.get('/societe', function(req, res, next) {
   res.render('societe', { title: 'Société SAIO - Découvrez qui se cache derrière SAIO', description : 'Créée en avril 2014, SAIO ambitionne de révolutionner le service client digital. Notre mission est de simplifier la façon dont les entreprises et leurs clients communiquent et interagissent sur le web.', url : config.urlDomain});
 });
 
+//GET partners page
+router.get('/partenaires', function(req, res, next) {
+  res.render('partenaires', { title: 'Société SAIO - Découvrez le réseau d\'experts SAIO', description : 'Créée en avril 2014, SAIO ambitionne de révolutionner le service client digital. Notre mission est de simplifier la façon dont les entreprises et leurs clients communiquent et interagissent sur le web.', url : config.urlDomain});
+});
+
 //GET recruitment page
 router.get('/recrutement', function(req, res, next) {
   res.render('recrutement', { title: 'Recrutement SAIO - Rejoignez l\'aventure SAIO', description : '', url : config.urlDomain});
@@ -66,10 +71,13 @@ router.get('*',function(req, res, next) {
   res.render('404', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain});
 });
 
-//send mail contact
+//send mail
 router.post('/mail', function(req, res, next){
 
+  // contact request
   if (!!req.body.email && !!req.body.message) {
+
+    console.log('contact demand sending');
 
     var mcReq = {
         apikey: apiKey,
@@ -96,10 +104,14 @@ router.post('/mail', function(req, res, next){
           return;
         }
         res.send(true);
-        console.log('mail adress send');
+        console.log('contact demand send');
     });
   }
-  if (!!req.body.test) {
+
+  // test request
+  if (!!req.body.test && !req.body.email) {
+
+    console.log('test demand sending');
 
     var mcReq = {
         apikey: apiKey,
@@ -115,7 +127,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'contact@saio.fr',
+        to: 'nicolas.mitchell@saio.fr',
         subject: 'Demande de test',
         email: 'Je souhaite tester vos solutions, voici mon e-mail : ' + req.body.test
       }, function (err) {
@@ -125,7 +137,44 @@ router.post('/mail', function(req, res, next){
           return;
         }
         res.send(true);
-        console.log('message send');
+        console.log('test demand send');
+    });
+  };
+
+  // partner request
+  if (!!req.body.company) {
+
+    console.log('partner demand sending');
+
+    var mcReq = {
+        apikey: apiKey,
+        id: listId,
+        email: {email: req.body.email},
+        merge_vars: {
+            LNAME: req.body.lname,
+            COMPANY: req.body.company
+        },
+        'double_optin': false
+    }
+    // submit subscription request to mail chimp
+    mc.lists.subscribe(mcReq, function(data) {
+        console.log(data);
+    }, function(error) {
+        console.log(error);
+    });
+
+    app.mailer.send('mail', {
+        to: 'nicolas.mitchell@saio.fr',
+        subject: req.body.company + ' - Demande de partenariat de ',
+        email: 'Je souhaite parler affaires avec vous, voici mon nom : ' + req.body.test + ' et mon e-mail : ' + req.body.email
+      }, function (err) {
+        if (err) {
+          console.log(err);
+          res.send('There was an error sending the test demand');
+          return;
+        }
+        res.send(true);
+        console.log('partner demand send');
     });
   };
 });
