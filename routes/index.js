@@ -109,7 +109,7 @@ router.post('/mail', function(req, res, next){
   }
 
   // test request
-  if (!!req.body.test && !req.body.email) {
+  if (!!req.body.test) {
 
     console.log('test demand sending');
 
@@ -127,7 +127,7 @@ router.post('/mail', function(req, res, next){
     });
 
     app.mailer.send('mail', {
-        to: 'nicolas.mitchell@saio.fr',
+        to: 'contact@saio.fr',
         subject: 'Demande de test',
         email: 'Je souhaite tester vos solutions, voici mon e-mail : ' + req.body.test
       }, function (err) {
@@ -165,8 +165,8 @@ router.post('/mail', function(req, res, next){
 
     app.mailer.send('mail', {
         to: 'nicolas.mitchell@saio.fr',
-        subject: req.body.company + ' - Demande de partenariat de ',
-        email: 'Je souhaite parler affaires avec vous, voici mon nom : ' + req.body.test + ' et mon e-mail : ' + req.body.email
+        subject: req.body.company + ' - Demande de partenariatn',
+        email: 'Je souhaite parler affaires avec vous, voici mon nom : ' + req.body.lname + ' et mon e-mail : ' + req.body.email
       }, function (err) {
         if (err) {
           console.log(err);
