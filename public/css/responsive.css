@@ -451,3 +451,48 @@ BUSINESS INTEL
 	}
 
 }
+
+
+/**************
+PARTNERS
+**************/
+
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	#presentation .wrapper {
+		width: 320px;
+	}
+
+	#partners .wrapper {
+		width: 360px;
+	}
+
+	#partners .partner {
+		width: 272px;
+	}
+
+	#partners .right {
+		margin-top: 23px;
+		margin-left: 0;
+	}
+
+	#contact-form .partner-form {
+		width: 320px;
+	}
+
+	#contact-form input {
+		width: 320px;
+	}
+
+}
+
+/*Small phones*/
+
+@media screen and (max-width: 380px) {
+
+
+
+}

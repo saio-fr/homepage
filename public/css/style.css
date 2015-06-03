@@ -22,7 +22,7 @@ GENERAL
 	body{
 		height: auto !important;
 		font-family: 'Lato', sans-serif;
-		line-height: 25px;
+		line-height: 1.5;
 		font-size: 18px;
 		font-weight: 300;
   		color: #898989;
@@ -1164,7 +1164,124 @@ PARTNERS
 #6ac9f6
 **************/
 
+#partners {
+	padding-bottom: 60px;
+}
 
+#partners .partner {
+	border: 1px solid #eeeeee;
+	padding: 40px;
+	width: 560px;
+	margin: 0 auto 40px;
+}
+
+#partners .container {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+#partners .crop {
+	width: 120px;
+	height: 120px;
+}
+
+#partners .left img {
+	max-width: 120px;
+	max-height: 120px;
+}
+
+#partners .apps2com {
+	margin-top: calc(50% - 24px);
+}
+
+#partners .left h2 {
+	color: #3c3c3c;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#partners .right {
+	width: 275px;
+	margin-top: 3px;
+	margin-left: 81px;
+}
+
+#partners .right span {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+#partners .client {
+	display: inline-block;
+	border: 1px solid #eeeeee;
+	width: 120px;
+	height: 160px;
+	margin-top: 23px;
+}
+
+#partners .second {
+	margin-top: 7px;
+}
+
+#partners .sosmalus {
+	margin-right: 27px;
+}
+
+#partners .client:hover {
+	background-color: #eeeeee;
+}
+
+#partners .client img {
+	display: block;
+	max-width: 80px;
+	max-height: 80px;
+	margin: 28px auto 0;
+}
+
+#partners .client h3 {
+	font-size: 14px;
+	margin-top: 3px;
+}
+
+#contact-form {
+	padding: 88px 0 155px 0;
+	background-color: #6ac9f6;
+}
+
+#contact-form h2 {
+	text-align: center;
+	font-family: 'Geomanist Light', sans-serif;
+	color: #fff;
+	margin-bottom: 49px;
+}
+
+#contact-form .partner-form {
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#contact-form input {
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#contact-form .button {
+	position: absolute;
+	right: 0;
+	background-color: #ffd234;
+	border: 1px solid #fff;
+	color: #3c3c3c;
+	width: 238px;
+	font-size: 21px;
+}
+
+#contact-form .button:hover {
+	background-color: rgba(255, 210, 52, 0.8);
+}
 
 
 /**************
