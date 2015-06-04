@@ -493,6 +493,36 @@ PARTNERS
 
 @media screen and (max-width: 380px) {
 
+	#presentation .wrapper {
+		width: 260px;
+	}
 
+	#partners .wrapper {
+		width: 260px;
+	}
+
+	#partners .partner {
+		width: 180px;
+	}
+
+	#partners .container {
+		width: 180px;
+	}
+
+	#partners .client {
+		display: block;
+	}
+
+	#contact-form .partner-form {
+		width: 260px;
+	}
+
+	#contact-form input {
+		width: 260px;
+	}
+
+	#contact-form .button {
+		width: 260px;
+	}
 
 }
