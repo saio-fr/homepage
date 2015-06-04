@@ -165,8 +165,8 @@ router.post('/mail', function(req, res, next){
 
     app.mailer.send('mail', {
         to: 'nicolas.mitchell@saio.fr',
-        subject: req.body.company + ' - Demande de partenariatn',
-        email: 'Je souhaite parler affaires avec vous, voici mon nom : ' + req.body.lname + ' et mon e-mail : ' + req.body.email
+        subject: req.body.company + ' - Demande de partenariat',
+        email: 'Je souhaite que l\'on parle affaires, voici mon nom : ' + req.body.lname + ' et mon e-mail : ' + req.body.email
       }, function (err) {
         if (err) {
           console.log(err);

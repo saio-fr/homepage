@@ -1176,14 +1176,21 @@ PARTNERS
 }
 
 #partners .container {
-	display: inline-block;
 	vertical-align: top;
-	width: 200px;
 }
 
 #partners .crop {
+	display: inline-block;
+	float: right;
+	vertical-align: top;
 	width: 120px;
 	height: 120px;
+	margin-right: 1px;
+}
+
+#partners .description {
+	display: inline-block;
+	width: calc(100% - 145px);
 }
 
 #partners .left img {
@@ -1192,42 +1199,42 @@ PARTNERS
 }
 
 #partners .apps2com {
-	margin-top: calc(50% - 24px);
+	/*margin-top: calc(50% - 24px);*/
 }
 
 #partners .left h2 {
 	color: #3c3c3c;
 	font-size: 24px;
 	text-transform: uppercase;
-	margin-top: 20px;
+	margin-top: -14px;
 	margin-bottom: 10px;
 }
 
 #partners .right {
-	width: 275px;
-	margin-top: 3px;
-	margin-left: 81px;
+	margin-top: 32px;
 }
 
 #partners .right span {
+	display: block;
 	text-transform: uppercase;
 	font-size: 14px;
+}
+
+#partners .clients {
+	display: inline-block;
 }
 
 #partners .client {
 	display: inline-block;
 	border: 1px solid #eeeeee;
-	width: 120px;
+	width: 122px;
 	height: 160px;
 	margin-top: 23px;
+	margin-right: 17px;
 }
 
-#partners .second {
-	margin-top: 7px;
-}
-
-#partners .sosmalus {
-	margin-right: 27px;
+#partners .client.last {
+	margin-right: 0;
 }
 
 #partners .client:hover {
