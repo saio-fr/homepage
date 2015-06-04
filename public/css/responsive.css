@@ -474,6 +474,14 @@ PARTNERS
 		width: 272px;
 	}
 
+	#partners .description {
+		width: 100%;
+	}
+
+	#partners .crop {
+		display: none;
+	}
+
 	#contact-form .partner-form {
 		width: 320px;
 	}
