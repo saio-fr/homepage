@@ -73,6 +73,15 @@ $( document ).ready(function() {
 
   });
 
+  //roll-over bouton menu
+  $(".connection").mouseover(function() {
+    $(".connection").find(".button").css({'color':'#fff'});
+  });
+
+  $(".connection").mouseout(function() {
+    $(".connection").find(".button").css({'color':'#3c3c3c'});
+  });
+
   //open/close menu mobile
   $(".mobile-menu").click(function() {
 

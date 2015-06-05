@@ -161,8 +161,17 @@ GENERAL
 		padding: 0px 27px;
 	}
 
-	nav a:hover {
+	nav .solutions:hover {
 		color: #6ac9f6;
+	}
+
+	nav li > a:hover {
+		color: #6ac9f6;
+	}
+
+	nav .connection {
+		padding: 0;
+		margin-left: 33px;
 	}
 
 	nav .button {
@@ -170,12 +179,10 @@ GENERAL
 		font-size: 14px;
 		line-height: 8px;
 		font-weight: 400;
-		margin-left: 33px;
 	}
 
 	nav .button:hover {
 		background-color: #6ac9f6;
-		color: #fff;
 		border: 1px solid #6ac9f6;
 	}
 
