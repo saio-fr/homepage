@@ -235,11 +235,11 @@ GENERAL
 
 	.solutions-menu {
 		position: fixed;
-		top: -180px;
+		top: -182px;
 		z-index: 50;
 		background-color: #fff;
 		width: 100%;
-		height: 250px;
+		height: 252px;
 		box-shadow: 0px 1px 1px 0px rgba(108, 108, 108, 0.25);
       	-moz-box-shadow: 0px 1px 1px 0px rgba(108, 108, 108, 0.25);
       	-webkit-box-shadow: 0px 1px 1px 0px rgba(108, 108, 108, 0.25);
