@@ -1047,7 +1047,7 @@ SOCIETY
 		padding-bottom: 74px;
 	}
 
-	#presentation .wrapper {
+	#presentation.society .wrapper {
 		width: 440px;
 	}
 
@@ -1171,10 +1171,118 @@ PARTNERS
 #6ac9f6
 **************/
 
+#punchline.partners .button {
+	display: block;
+	margin: 50px auto 0;
+}
+
+#punchline.partners a {
+	display: block;
+	width: 200px;
+	margin: 60px auto 10px;
+}
+
+#punchline.partners img {
+	display: block;
+	position: initial;
+	width: 200px;
+	margin: 60px auto 0;
+	opacity: 0.85;
+}
+
+#presentation.partners {
+	padding-top: 53px;
+	padding-bottom: 73px;
+}
+
+#presentation.partners .title {
+	text-align: center;
+}
+
+#presentation.partners h2 {
+	margin-bottom: 10px;
+}
+
+#presentation.partners .container {
+	width: 860px;
+	margin: 20px auto;
+}
+
+#presentation.partners .content {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 240px;
+	margin-right: 66px;
+}
+
+#presentation.partners h3 {
+	margin-bottom: 30px;
+}
+
+#presentation.partners .content.last {
+	margin-right: 0;
+}
+
+#features.partners {
+	position: relative;
+}
+
+#features.partners .timeline {
+	position: absolute;
+	background-color: #6ac9f6;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+	margin-left: calc(50% - 3px);
+}
+
+#features.partners .block {
+	position: relative;
+	border: none;
+	z-index: 1;
+}
+
+#features.partners .block {
+	padding: 80px 60px 73px 80px;
+}
+
+#features.partners .right .block {
+	margin-left: calc(100% - 500px);
+}
+
+#features.partners .step {
+	position: absolute;
+	color: #fff;
+	background-color: #6ac9f6;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	top: calc(50% - 20px);
+}
+
+#features.partners .left .step {
+	right: -20px;
+}
+
+#features.partners .right .step {
+	right: calc(100% - 20px);
+}
+
+#features.partners .block h2 {
+	color: #3c3c3c;
+	font-size: 24px;
+}
+
+#features.partners p {
+	margin-top: 21px;
+}
+
 #partners {
 	padding-top: 52px;
 	padding-bottom: 40px;
-	background-color: #eee;
 }
 
 #partners h2 {
@@ -1184,10 +1292,10 @@ PARTNERS
 }
 
 #partners .partner {
+	border: 1px solid #eee;
 	border-top: 5px solid #6ac9f6;
-	background-color: #fff;
 	padding: 40px;
-	width: 560px;
+	width: 540px;
 	margin: 0 auto 40px;
 }
 
@@ -1195,39 +1303,22 @@ PARTNERS
 	vertical-align: top;
 }
 
-#partners .crop {
-	display: inline-block;
-	float: right;
-	vertical-align: top;
-	width: 120px;
-	height: 120px;
-	margin-right: 1px;
-}
-
 #partners .description {
 	display: inline-block;
-	width: calc(100% - 145px);
+	width: 100%;
 }
 
-#partners .left img {
-	max-width: 120px;
-	max-height: 120px;
+#partners img {
+	max-width: 160px;
+	max-height: 160px;
+	margin-bottom: 25px;
 }
 
-#partners .left h2 {
-	text-align: left;
-	color: #3c3c3c;
-	font-size: 24px;
-	text-transform: uppercase;
-	margin-top: -14px;
-	margin-bottom: 10px;
-}
-
-#partners .right {
+#partners .container.last {
 	margin-top: 32px;
 }
 
-#partners .right span {
+#partners .container span {
 	display: block;
 	text-transform: uppercase;
 	font-size: 14px;

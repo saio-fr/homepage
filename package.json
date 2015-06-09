@@ -15,6 +15,7 @@
     "serve-favicon": "~2.2.0",
     "swig": "~1.4.2",
     "express-mailer": "~0.2.4",
-    "mailchimp-api": "*"
+    "mailchimp-api": "*",
+    "cssmin": "*"
   }
 }

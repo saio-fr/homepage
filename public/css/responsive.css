@@ -466,6 +466,23 @@ PARTNERS
 		width: 320px;
 	}
 
+	#presentation.partners .container {
+		width: 240px;
+	}
+
+	#presentation.partners .content {
+		margin-right: 0;
+	}
+
+	#features.partners .right .block {
+		margin-left: 0;
+	}
+
+	#features.partners .left .step, #features.partners .right .step{
+		top: -20px;
+		right: calc(50% - 20px);
+	}
+
 	#partners .wrapper {
 		width: 360px;
 	}
