@@ -458,11 +458,26 @@ PARTNERS
 **************/
 
 
-/*Phones*/
+/*Small screens*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
 
-	#presentation .wrapper {
+	#presentation.partners .container {
+	  width: 860px;
+	}
+
+	#presentation.partners .content {
+		width: 240px;
+		margin-right: 66px;
+	}
+
+}
+
+/*Tablets*/
+
+@media screen and (max-width: 900px) {
+
+	#presentation.partners .wrapper {
 		width: 320px;
 	}
 
@@ -472,6 +487,20 @@ PARTNERS
 
 	#presentation.partners .content {
 		margin-right: 0;
+	}
+
+	#features.partners .wrapper {
+	  width: 600px;
+	}
+
+}
+
+/*Phones*/
+
+@media screen and (max-width: 700px) {
+
+	#features.partners .wrapper {
+	  width: 320px;
 	}
 
 	#features.partners .right .block {
@@ -515,6 +544,10 @@ PARTNERS
 
 	#presentation .wrapper {
 		width: 260px;
+	}
+
+	#features.partners .wrapper {
+	  width: 260px;
 	}
 
 	#partners .wrapper {
