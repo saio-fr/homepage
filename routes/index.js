@@ -42,7 +42,7 @@ router.get('/societe', function(req, res, next) {
 
 //GET partners page
 router.get('/partenaires', function(req, res, next) {
-  res.render('partenaires', { title: 'Société SAIO - Découvrez le réseau d\'experts SAIO', description : 'Créée en avril 2014, SAIO ambitionne de révolutionner le service client digital. Notre mission est de simplifier la façon dont les entreprises et leurs clients communiquent et interagissent sur le web.', url : config.urlDomain});
+  res.render('partenaires', { title: 'Partenaires SAIO - Faites confiance à nos partenaires !', description : 'De la définition de vos besoins jusqu’au suivi de vos performances, les partenaires SAIO vous accompagnent au quotidien', url : config.urlDomain});
 });
 
 //GET recruitment page
