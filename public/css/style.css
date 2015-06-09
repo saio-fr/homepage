@@ -1232,7 +1232,7 @@ PARTNERS
 	position: absolute;
 	background-color: #6ac9f6;
 	top: 0;
-	bottom: 0;
+	bottom: 80px;
 	width: 5px;
 	margin-left: calc(50% - 3px);
 }
