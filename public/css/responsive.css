@@ -510,10 +510,15 @@ PARTNERS
 		width: 100%;
 	}
 
-	#testimony.partners .images {
+	#testimony.partners .signature span {
+		margin-top: -7px;
+	}
+
+/*	#testimony.partners .partner {
 		display: block;
 		margin: 30px auto 0;
 	}
+*/
 
 	#features.partners .wrapper {
 	  width: 320px;

@@ -402,7 +402,13 @@ GENERAL
 	}
 
 	#features a {
-		font-weight: 400;
+		color: #3c3c3c;
+		border-bottom: 1px solid rgba(60, 60, 60, 0.5);
+		padding-bottom: 3px;
+	}
+
+	#features a:hover {
+		border-bottom: 1px solid #3c3c3c;
 	}
 
 	#features .charts {
@@ -1172,6 +1178,10 @@ PARTNERS
 #6ac9f6
 **************/
 
+	#punchline.partners {
+		padding-bottom: 205px;
+	}
+
 	#punchline.partners a {
 		display: block;
 		width: 200px;
@@ -1198,55 +1208,66 @@ PARTNERS
 
 	#testimony.partners .container {
 		display: inline-block;
-		width: calc(100% - 160px);
+		width: calc(100% - 240px);
 	}
 
-	#testimony.partners .container h2 {
-		font-size: 24px;
-		color: #fff;
+	#testimony.partners .container img {
+		max-width: 120px;
+		max-height: 120px;
 		margin-bottom: 27px;
 	}
 
 	#testimony.partners .container p {
 		color: #fff;
+		font-size: 24px;
 		margin-bottom: 34px;
 	}
 
-	#testimony.partners .container span {
-		color: #fff;
+	#testimony.partners .signature img {
+		display: inline-block;
+		width: 40px;
+		border-radius: 20px;
 	}
 
-	#testimony.partners .container a {
+	#testimony.partners a {
 		color: #fff;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 		padding-bottom: 3px;
 	}
 
-	#testimony.partners .container a:hover {
+	#testimony.partners a:hover {
 		color: #fff;
 		border-bottom: 1px solid #fff;
 	}
 
-	#testimony.partners .images {
+	#testimony.partners .signature span {
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		width: calc(100% - 75px);
+		margin-top: 5px;
+		margin-left: 15px;
+	}
+
+/*	#testimony.partners .partner {
 		display: inline-block;
 		vertical-align: top;
 		width: 80px;
 		margin-left: 76px;
 	}
 
-	#testimony.partners .images img {
+	#testimony.partners .partner img {
 		vertical-align: top;
-		max-width: 80px;
-		max-height: 80px;
+		max-width: 120px;
+		max-height: 120px;
 		margin-top: 20px;
-		margin-bottom: 40px;
 	}
 
-	#testimony.partners .images span {
+	#testimony.partners .partner span {
 		text-transform: uppercase;
 		color: #fff;
-		font-size: 14px;
 	}
+*/
 
 	#presentation.partners {
 		padding-top: 80px;
@@ -1325,11 +1346,14 @@ PARTNERS
 		position: relative;
 		border: none;
 		z-index: 1;
-	}
-
-	#features.partners .block {
 		padding: 80px 60px 73px 80px;
 	}
+
+	#features.partners .block h2 {
+		text-align: left;
+		margin: 0;
+	}
+
 
 	#features.partners .right .block {
 		margin-left: calc(100% - 500px);
@@ -1393,10 +1417,20 @@ PARTNERS
 		width: 100%;
 	}
 
-	#partners img {
+	#partners .description img {
 		max-width: 160px;
 		max-height: 160px;
 		margin-bottom: 25px;
+	}
+
+	#partners .description p > a {
+		color: #3c3c3c;
+		border-bottom: 1px solid rgba(60, 60, 60, 0.5);
+		padding-bottom: 3px;
+	}
+
+	#partners .description p > a:hover {
+		border-bottom: 1px solid #3c3c3c;
 	}
 
 	#partners .container.last {
