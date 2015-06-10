@@ -61,7 +61,7 @@ GENERAL
 		position: relative;
   		z-index: 10;
 		width: 640px;
-		margin: 52px auto 0px auto;
+		margin: 50px auto 0;
 	}
 
 	.test .button {
@@ -103,8 +103,8 @@ GENERAL
 
 	h1 {
 		text-align: center;
-		font-size: 54px;
-		line-height:70px;
+		font-size: 56px;
+		line-height: 1.25;
 		font-weight: 400;
 		color: #fff;
 		font-family: 'Geomanist Regular', sans-serif;
@@ -112,8 +112,8 @@ GENERAL
 
 	h2 {
 		color: #6ac9f6;
-		font-size: 30px;
-		line-height: 45px;
+		font-size: 32px;
+		line-height: 1.25;
 		font-weight: 400;
 		font-family: 'Geomanist Regular', sans-serif;
 	}
@@ -509,7 +509,8 @@ GENERAL
 
 	#functions img {
 		display: block;
-		width: 50px;
+		max-width: 50px;
+		max-height: 50px;
 		margin: auto;
 		padding-top: 25px;
 	}
@@ -1174,7 +1175,7 @@ PARTNERS
 	#punchline.partners a {
 		display: block;
 		width: 200px;
-		margin: 60px auto 10px;
+		margin: 50px auto 0;
 	}
 
 	#punchline.partners img {
@@ -1185,9 +1186,71 @@ PARTNERS
 		opacity: 0.85;
 	}
 
+	#testimony.partners {
+		background-color: #3c3c3c;
+		padding-top: 80px;
+		padding-bottom: 60px;
+	}
+
+	#testimony.partners .wrapper {
+		width: 860px;
+	}
+
+	#testimony.partners .container {
+		display: inline-block;
+		width: calc(100% - 160px);
+	}
+
+	#testimony.partners .container h2 {
+		font-size: 24px;
+		color: #fff;
+		margin-bottom: 27px;
+	}
+
+	#testimony.partners .container p {
+		color: #fff;
+		margin-bottom: 34px;
+	}
+
+	#testimony.partners .container span {
+		color: #fff;
+	}
+
+	#testimony.partners .container a {
+		color: #fff;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		padding-bottom: 3px;
+	}
+
+	#testimony.partners .container a:hover {
+		color: #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+	#testimony.partners .images {
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+		margin-left: 76px;
+	}
+
+	#testimony.partners .images img {
+		vertical-align: top;
+		max-width: 80px;
+		max-height: 80px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	#testimony.partners .images span {
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 14px;
+	}
+
 	#presentation.partners {
-		padding-top: 38px;
-  		padding-bottom: 73px;
+		padding-top: 80px;
+  		padding-bottom: 40px;
 	}
 
 	#presentation.partners .title {
@@ -1207,8 +1270,29 @@ PARTNERS
 		margin-right: 96px;
 	}
 
-	#presentation.partners h3 {
-		margin-bottom: 30px;
+	#presentation.partners .rounded {
+		background-color: #f7f7f7;
+		height: 80px;
+		width: 80px;
+		border-radius: 40px;
+		margin: 0 auto 15px;
+	}
+
+	#presentation.partners img {
+		display: block;
+		max-width: 40px;
+		max-height: 40px;
+		margin: auto;
+		padding-top: 20px;
+	}
+
+	#presentation.partners h2 {
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+
+	#presentation.partners p {
+		margin-bottom: 33px;
 	}
 
 	#presentation.partners .content.last {
@@ -1223,10 +1307,15 @@ PARTNERS
 	  width: 860px;
 	}
 
+	#features.partners h2 {
+		text-align: center;
+		margin-bottom: 92px;
+	}
+
 	#features.partners .timeline {
 		position: absolute;
 		background-color: #6ac9f6;
-		top: 0;
+		top: 52px;
 		bottom: 80px;
 		width: 5px;
 		margin-left: calc(50% - 3px);
@@ -1250,20 +1339,21 @@ PARTNERS
 		position: absolute;
 		color: #fff;
 		background-color: #6ac9f6;
-		border-radius: 20px;
-		width: 40px;
-		height: 40px;
+		border-radius: 25px;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
 		text-align: center;
-		line-height: 40px;
-		top: calc(50% - 20px);
+		line-height: 50px;
+		top: calc(50% - 25px);
 	}
 
 	#features.partners .left .step {
-		right: -20px;
+		right: -25px;
 	}
 
 	#features.partners .right .step {
-		right: calc(100% - 20px);
+		right: calc(100% - 25px);
 	}
 
 	#features.partners .block h2 {

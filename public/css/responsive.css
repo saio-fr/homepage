@@ -166,7 +166,6 @@ NAV
 		margin: -33px auto;
 	}
 
-
 }
 
 
@@ -477,6 +476,10 @@ PARTNERS
 
 @media screen and (max-width: 900px) {
 
+	#testimony.partners .wrapper {
+		width: 600px;
+	}
+
 	#presentation.partners .wrapper {
 		width: 320px;
 	}
@@ -499,6 +502,19 @@ PARTNERS
 
 @media screen and (max-width: 700px) {
 
+	#testimony.partners .wrapper {
+		width: 320px;
+	}
+
+	#testimony.partners .container {
+		width: 100%;
+	}
+
+	#testimony.partners .images {
+		display: block;
+		margin: 30px auto 0;
+	}
+
 	#features.partners .wrapper {
 	  width: 320px;
 	}
@@ -508,8 +524,8 @@ PARTNERS
 	}
 
 	#features.partners .left .step, #features.partners .right .step{
-		top: -20px;
-		right: calc(50% - 20px);
+		top: -25px;
+		right: calc(50% - 25px);
 	}
 
 	#partners .wrapper {
@@ -541,6 +557,15 @@ PARTNERS
 /*Small phones*/
 
 @media screen and (max-width: 380px) {
+
+	#punchline.partners h1 {
+		word-wrap: break-word;
+		width: 275px;
+	}
+
+	#testimony.partners .wrapper {
+		width: 260px;
+	}
 
 	#presentation .wrapper {
 		width: 260px;
