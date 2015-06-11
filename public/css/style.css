@@ -1179,7 +1179,7 @@ PARTNERS
 **************/
 
 	#punchline.partners {
-		padding-bottom: 205px;
+		padding-bottom: 105px;
 	}
 
 	#punchline.partners a {
@@ -1215,7 +1215,7 @@ PARTNERS
 		display: inline-block;
 		vertical-align: top;
 		color: #fff;
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	#testimony.partners .images img {
@@ -1224,7 +1224,7 @@ PARTNERS
 		max-width: 120px;
 		max-height: 120px;
 		margin-bottom: 33px;
-		margin-right: 40px;
+		margin-right: 20px;
 	}
 
 	#testimony.partners .images .apps2com {
@@ -1486,6 +1486,14 @@ PARTNERS
 		max-width: 80px;
 		max-height: 80px;
 		margin: 28px auto 0;
+	}
+
+	#partners .client .sollyazar {
+		margin-bottom: 58px;
+	}
+
+	#partners .client .best-assurances {
+		margin-bottom: 33px;
 	}
 
 	#partners .client h3 {
