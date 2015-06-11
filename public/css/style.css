@@ -1215,7 +1215,7 @@ PARTNERS
 		display: inline-block;
 		vertical-align: top;
 		color: #fff;
-		margin-top: 40px;
+		margin-top: 20px;
 	}
 
 	#testimony.partners .images img {
@@ -1230,6 +1230,7 @@ PARTNERS
 	#testimony.partners .images .apps2com {
 		margin-top: 43px;
 		margin-left: 10px;
+		margin-right: 0;
 	}
 
 	#testimony.partners .container p {
