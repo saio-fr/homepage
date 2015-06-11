@@ -462,12 +462,7 @@ PARTNERS
 @media screen and (max-width: 1200px) {
 
 	#presentation.partners .container {
-	  width: 860px;
-	}
-
-	#presentation.partners .content {
-		width: 240px;
-		margin-right: 66px;
+	  width: 560px;
 	}
 
 }

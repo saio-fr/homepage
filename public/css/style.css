@@ -1211,10 +1211,25 @@ PARTNERS
 		width: calc(100% - 240px);
 	}
 
-	#testimony.partners .container img {
+	#testimony.partners .images span {
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		margin-top: 40px;
+	}
+
+	#testimony.partners .images img {
+		display: inline-block;
+		vertical-align: top;
 		max-width: 120px;
 		max-height: 120px;
-		margin-bottom: 27px;
+		margin-bottom: 33px;
+		margin-right: 40px;
+	}
+
+	#testimony.partners .images .apps2com {
+		margin-top: 43px;
+		margin-left: 10px;
 	}
 
 	#testimony.partners .container p {
@@ -1280,7 +1295,7 @@ PARTNERS
 	}
 
 	#presentation.partners .container {
-		width: 1160px;
+		width: 560px;
 		margin: 20px auto;
 	}
 
@@ -1288,8 +1303,8 @@ PARTNERS
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
-		width: 320px;
-		margin-right: 96px;
+		width: 240px;
+		margin-right: 66px;
 	}
 
 	#presentation.partners .rounded {
