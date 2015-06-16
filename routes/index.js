@@ -12,7 +12,7 @@ var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 
 //Permanent redirections
 
-router.get('http://www.saio.fr/*', function (req, res, next) {
+router.get('www.saio.fr*', function (req, res, next) {
   res.redirect(301, 'http://saio.fr' + req.path);
 });
 
