@@ -16,10 +16,6 @@ router.get('http://www.saio.fr/*', function (req, res, next) {
   res.redirect(301, 'http://saio.fr' + req.path);
 });
 
-router.get('*/', function (req, res, next) {
-  res.redirect(301, 'http://saio.fr' + req.path);
-});
-
 //GET home page
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain, route : ''});
