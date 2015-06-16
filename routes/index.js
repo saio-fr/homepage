@@ -10,6 +10,11 @@ var apiKey = '79da343dd12c89bd64a54738b89c1260-us10';
 var listId = 'b7ada5d04a';
 var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 
+//Permanent redirections
+router.get('*', function (req, res, next) {
+  res.redirect(301, 'http://saio.fr' + req.path);
+});
+
 //GET home page
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain, route : ''});
