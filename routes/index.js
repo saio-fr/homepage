@@ -13,8 +13,9 @@ var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 //Permanent redirections
 
 router.get('*', function (req, res, next) {
-  if (req.hostname === 'www.saio.fr') {
-     res.redirect(301, 'http://saio.fr' + req.path); 
+  var path = '/' + req.path.replace('/','');
+  if (req.hostname === 'www.saio.fr' || req.path === '*/') {
+    res.redirect(301, 'http://saio.fr' + path); 
   }
   else {
     next();
