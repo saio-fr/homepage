@@ -15,7 +15,7 @@ var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 router.get('*', function (req, res, next) {
   var path = '/' + req.path.replace('/','');
   if (req.hostname === 'www.saio.fr' || req.path === '*/') {
-    res.redirect(301, 'http://saio.fr' + path); 
+    res.redirect(301, path); 
   }
   else {
     next();
