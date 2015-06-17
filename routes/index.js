@@ -17,8 +17,6 @@ router.get('*', function (req, res, next) {
   if (req.hostname === 'www.saio.fr') {
     res.redirect(301, 'http://saio.fr' + path); 
   }
-  if (req.path === '*/') {
-    res.redirect(301, path);
   else {
     next();
   }
