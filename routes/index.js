@@ -72,9 +72,14 @@ router.get('/contact', function (req, res, next) {
   res.render('contact', { title: 'Contact SAIO - Contactez-nous !', description : 'SAIO SAS - 44, rue Cauchy 94110 Arcueil - Tél : +33 1 55 01 04 37 - E-mail : contact@saio.fr', url : config.urlDomain, route : ''});
 });
 
-//GET pricing page
-router.get('/pricing', function (req, res, next) {
-  res.render('pricing', { title: 'Pricing SAIO', description : '', url : config.urlDomain, route : ''});
+//GET chat auto pricing page
+router.get('/pricing-chat-auto', function (req, res, next) {
+  res.render('pricing-chat-auto', { title: 'Pricing chat automatique SAIO', description : '', url : config.urlDomain, route : ''});
+});
+
+//GET live chat pricing page
+router.get('/pricing-live-chat', function (req, res, next) {
+  res.render('pricing-live-chat', { title: 'Pricing live chat SAIO', description : '', url : config.urlDomain, route : ''});
 });
 
 //GET login

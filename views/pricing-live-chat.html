@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!--Pricing-->
+<section id="punchline" class="live-chat">
+
+    <h1>Calculez le pricing du live chat SAIO</h1>
+
+</section>
+
+<section id="pricing" class="live-chat">
+
+    <div class="wrapper">
+        <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
+        <div class="container">
+            <h2>Live chat SAIO</h2>
+            <p>Sélectionnez le nombre d'agents qui vont utiliser la solution :</p>
+            <div class="slider">
+                <input type="range" min="0" max="20" step="1" value="5">
+            </div>
+            <h2>Choisissez votre formule</h2>
+            <div class="offers">
+                <div class="basic selected">
+                    <div class="button">BASIC</div>
+                    <ul>
+                        <li>Discutez en temps réel avec les visiteurs de votre site Internet</li>
+                        <li>Aidez vos conseillers en leur fournissant une base de Q/R clients</li>
+                        <li>Bénéficiez de notifications sonores et visuelles</li>
+                        <li>Proposez un formulaire de contact quand vos conseillers sont indisponibles</li>
+                    </ul>
+                </div>
+                <div class="pro">
+                    <div class="button">PRO</div>
+                    <ul>
+                        <li>Discutez en temps réel avec les visiteurs de votre site Internet</li>
+                        <li>Aidez vos conseillers en leur fournissant une base de Q/R clients</li>
+                        <li>Bénéficiez de notifications sonores et visuelles</li>
+                        <li>Proposez un formulaire de contact quand vos conseillers sont indisponibles</li>
+                        <li>Bénéficiez de statistiques détaillées</li>
+                        <li>Organisez vos agents par groupes de compétences</li>
+                        <li>Recevez un reporting d'activité hebdomadaire</li>
+                        <li>Augmentez la productivité des vos agents avec les messages pré-enregistrés</li>
+                    </ul>
+                </div>
+            </div>
+            <span>Le prix sera de :</span>
+            <div class="price">89€ /mois + 200€ d'acquisition du module Live chat</div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

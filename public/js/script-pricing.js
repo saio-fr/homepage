@@ -2,8 +2,10 @@ $( document ).ready(function() {
 
 	//variables
 	var forfait = 'basic';
-	var calc;
-	var ratio = 2;
+	var calcAuto;
+	var calcLive;
+	var ratioAuto = 2;
+	var ratioLive = 2;
 
 	//pricing selection
 	$(".button").click(function() {
@@ -14,12 +16,14 @@ $( document ).ready(function() {
 
 			if ($(this).parent().hasClass("basic")) {
 				forfait = 'basic';
-				calc = calc / ratio;
+				calcAuto = calcAuto / ratioAuto;
+				calcLive = calcLive / ratioLive;
 				$(".price").html("Votre prix sera de " + calc + "€ /mois");
 			}
 			if ($(this).parent().hasClass("pro")) {
 				forfait = 'pro';
-				calc = calc * ratio;
+				calcAuto = calcAuto / ratioAuto;
+				calcLive = calcLive / ratioLive;
 				$(".price").html("Votre prix sera de " + calc + "€ /mois");
 			}
 			else {
@@ -37,7 +41,8 @@ $( document ).ready(function() {
     tempPosition, 
     position;
 
-	$('input[type="range"]').rangeslider({
+    //auto chat
+	$(".auto-chat").find('input[type="range"]').rangeslider({
 	  polyfill: false,
 	  onInit: function() {
 	      this.$range.append($(valueBubble));
@@ -53,16 +58,42 @@ $( document ).ready(function() {
 	      $valueBubble[0].innerHTML = value;
 
 	      if (forfait === 'basic') {
-			calc = value * 0.2 ;	      	
+			calcAuto = value * 0.2 ;	      	
 	      };
 	      if (forfait === 'pro') {
-			calc = value * 0.4 ;	      	
+			calcAuto = value * 0.4 ;	      	
 	      };
-	      $(".price").html("Votre prix sera de " + calc + "€ /mois");
+	      $(".price").html(calcAuto + "€ /mois + 400€ de mise en place");
 	    }
 	  }
 	});
 
+    //live chat
+	$(".live-chat").find('input[type="range"]').rangeslider({
+	  polyfill: false,
+	  onInit: function() {
+	      this.$range.append($(valueBubble));
+	      this.update();
+	  },
+	  onSlide: function(pos, value) {
+	    var $valueBubble = $('.rangeslider__value-bubble', this.$range);
+	    tempPosition = pos + this.grabX;
+	    position = (tempPosition <= this.handleWidth) ? this.handleWidth : (tempPosition >= this.maxHandleX) ? this.maxHandleX : tempPosition;
+	    
+	    if ($valueBubble.length) {
+	      $valueBubble[0].style.left = Math.ceil(position) + 'px';
+	      $valueBubble[0].innerHTML = value;
+
+	      if (forfait === 'basic') {
+			calcLive = value * 0.2 ;	      	
+	      };
+	      if (forfait === 'pro') {
+			calcLive = value * 0.4 ;	      	
+	      };
+	      $(".price").html(calcLive + "€ /mois + 200€ de mise en place");
+	    }
+	  }
+	});
 
 
 });

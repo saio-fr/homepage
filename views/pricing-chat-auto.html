@@ -2,18 +2,18 @@
 
 {% block content %}
 <!--Pricing-->
-<section id="punchline" class="home">
+<section id="punchline" class="auto-chat">
 
-    <h1>Calculez votre pricing SAIO</h1>
+    <h1>Calculez le pricing du chat automatique SAIO</h1>
 
 </section>
 
-<section id="pricing" class="home">
+<section id="pricing" class="auto-chat">
 
     <div class="wrapper">
         <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
         <div class="container">
-            <h2>SAIO support</h2>
+            <h2>Chat automatique SAIO</h2>
             <p>Sélectionnez le nombre de conversations que vous souhaitez réaliser par mois :</p>
             <div class="slider">
                 <input type="range" min="0" max="1000" step="100" value="600">
@@ -43,7 +43,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="price">Votre prix sera de : 89€ /mois</div>
+            <span>Le prix sera de :</span>
+            <div class="price"></div>
         </div>
     </div>
 

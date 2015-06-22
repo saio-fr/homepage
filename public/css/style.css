@@ -1725,6 +1725,7 @@ PRICING
 		display: inline-block;
 		vertical-align: top;
 		border: 1px solid #3c3c3c;
+		background-color: #fff;
 		width: 80px;
 		max-height: 80px;
 		border-radius: 40px;
@@ -1733,14 +1734,40 @@ PRICING
 
 	#pricing .container {
 		display: inline-block;
+		position: relative;
 		background-color: #fff;
-		border-top: 5px solid #6ac9f6;
 		width: calc(100% - 200px);
 		padding: 40px;
 	}
 
+	#pricing.auto-chat .container {
+		border-top: 5px solid #8dc34c;
+	}
+
+	#pricing.live-chat .container {
+		border-top: 5px solid #ff7955;
+	}
+
+	#pricing .container:before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		right: 100%;
+		border-width: 15px 15px 15px 0;
+		border-style: solid;
+		border-color: transparent #fff transparent transparent;
+	}
+
 	#pricing h2 {
 		margin-bottom: 25px;
+	}
+
+	#pricing.auto-chat h2 {
+		color: #8dc34c;
+	}
+
+	#pricing.live-chat h2 {
+		color: #ff7955;
 	}
 
 	#pricing .slider {
@@ -1748,13 +1775,15 @@ PRICING
 	}
 
 	#pricing .button {
-		border: 1px solid #3c3c3c;
+		border: 1px solid #898989;
 		background-color: #fff;
+		color: #898989;
 	}
 
 	#pricing .selected .button {
 		border: 1px solid #ffd234;
 		background-color: #ffd234;
+		color: #3c3c3c;
 	}
 
 	#pricing ul {
@@ -1762,13 +1791,11 @@ PRICING
 		padding-top: 20px;
 		font-size: 16px;
 		margin-top: 19px;
-	}
-
-	#pricing li {
 		opacity: 0.5;
 	}
 
-	#pricing .selected li {
+	#pricing .selected ul {
+		border-top: #898989 1px solid;
 		opacity: 1;
 	}
 
@@ -1785,11 +1812,16 @@ PRICING
 		width: calc(50% - 40px);
 	}
 
+	#pricing span {
+		display: inherit;
+		margin-top: 34px;
+		margin-bottom: 12px;
+	}
+
 	#pricing .price {
 		background-color: #eee;
 		padding: 20px;
 		line-height: 15px;
-		margin-top: 34px;
 	}
 
 	/* Slider */
