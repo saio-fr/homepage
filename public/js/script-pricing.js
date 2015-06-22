@@ -63,7 +63,7 @@ $( document ).ready(function() {
 	      if (forfait === 'pro') {
 			calcAuto = value * 0.4 ;	      	
 	      };
-	      $(".price").html(calcAuto + "€ /mois + 400€ de mise en place");
+	      $(".price").html("<strong>" + calcAuto + "€ /mois</strong> + 400€ de mise en place");
 	    }
 	  }
 	});
@@ -90,7 +90,7 @@ $( document ).ready(function() {
 	      if (forfait === 'pro') {
 			calcLive = value * 0.4 ;	      	
 	      };
-	      $(".price").html(calcLive + "€ /mois + 200€ de mise en place");
+	      $(".price").html("<strong>" + calcLive + "€ /mois</strong> + 200€ de mise en place");
 	    }
 	  }
 	});

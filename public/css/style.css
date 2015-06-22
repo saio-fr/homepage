@@ -1826,16 +1826,6 @@ PRICING
 
 	/* Slider */
 
-	.rangeslider__value-bubble {
-	  display: block;
-	  padding: 5px;
-	  position: absolute;
-	  bottom: 100%;
-	  margin-bottom: 18px;
-	  width: 50px;
-	  margin-left: -30px;
-	  text-align: center;
-	}
 	.rangeslider__value-bubble:before, .rangeslider__value-bubble:after {
 	  border-width: 11px;
 	  border-style: solid;
@@ -1843,7 +1833,7 @@ PRICING
 	  content: "";
 	  display: block;
 	  margin: auto;
-	  width: 10px;
+	  width: 0px;
 	  position: absolute;
 	  left: 0;
 	  right: 0;
@@ -1871,7 +1861,7 @@ PRICING
 
 	.rangeslider__handle {
 	  background: white;
-	  border: 1px solid #ccc;
+	  border: 1px solid #898989;
 	  cursor: pointer;
 	  display: inline-block;
 	  width: 40px;
@@ -1897,4 +1887,48 @@ PRICING
 	  -moz-border-radius: 50%;
 	  -webkit-border-radius: 50%;
 	  border-radius: 50%;
+	}
+
+	/* Bulle */
+
+	.rangeslider__value-bubble {
+	  display: block;
+	  color: #fff;
+	  font-weight: 400;
+	  padding: 5px;
+	  position: absolute;
+	  bottom: 100%;
+	  margin-bottom: 25px;
+	  width: 50px;
+	  margin-left: -31px;
+	  text-align: center;
+	  -moz-border-radius: 5px;
+	  -webkit-border-radius: 5px;
+	  border-radius: 5px;
+	}
+
+	.auto-chat .rangeslider__value-bubble {
+		background-color: #6ac9f6;
+	}
+
+	.live-chat .rangeslider__value-bubble {
+		background-color: #6ac9f6;
+	}
+
+	.rangeslider__value-bubble:before {
+	  border-bottom-width: 0;
+	  bottom: -11px;
+	}
+	.rangeslider__value-bubble:after {
+	  border-top-color: #fff;
+	  border-bottom-width: 0;
+	  bottom: -10px;
+	}
+
+	.auto-chat .rangeslider__value-bubble:after {
+	  border-top-color: #6ac9f6;
+	}
+
+	.live-chat .rangeslider__value-bubble:after {
+	  border-top-color: #6ac9f6;
 	}
