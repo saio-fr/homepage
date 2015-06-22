@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!--Pricing-->
+<section id="punchline" class="home">
+
+    <h1>Calculez votre pricing SAIO</h1>
+
+</section>
+
+<section id="pricing" class="home">
+
+    <div class="wrapper">
+        <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
+        <div class="container">
+            <h2>SAIO support</h2>
+            <p>Sélectionnez le nombre de conversations que vous souhaitez réaliser par mois :</p>
+            <div class="slider">
+                <input type="range" min="0" max="1000" step="100" value="600">
+            </div>
+            <h2>Choisissez votre formule</h2>
+            <div class="offers">
+                <div class="basic selected">
+                    <div class="button">BASIC</div>
+                    <ul>
+                        <li>Construisez une base de Q/R pour vos clients</li>
+                        <li>Répondez automatiquement aux questions de vos visiteurs directement sur votre site Internet</li>
+                        <li>Améliorez votre service grâce aux questions non répondues</li>
+                        <li>Redirigez vos visiteurs vers le bon interlocuteur en cas de besoin</li>
+                    </ul>
+                </div>
+                <div class="pro">
+                    <div class="button">PRO</div>
+                    <ul>
+                        <li>Construisez une base de Q/R pour vos clients</li>
+                        <li>Répondez automatiquement aux questions de vos visiteurs directement sur votre site Internet</li>
+                        <li>Améliorez votre service grâce aux questions non répondues</li>
+                        <li>Redirigez vos visiteurs vers le bon interlocuteur en cas de besoin</li>
+                        <li>Envoyez des messages automatiques riches</li>
+                        <li>Discutez en temps réel avec vos visiteurs</li>
+                        <li>Reporting d'activités hebdomadaire</li>
+                        <li>Support premium</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="price">Votre prix sera de : 89€ /mois</div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
