@@ -7,11 +7,14 @@
     <div class="wrapper">
         <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
         <div class="container">
-            <h2>Chat automatique SAIO</h2>
+            <h1>Chat automatique SAIO</h1>
+            <h2>Conversations</h2>
             <p>Sélectionnez le nombre de conversations que vous souhaitez réaliser par mois :</p>
             <div class="slider">
                 <input type="range" min="0" max="1000" step="100" value="600">
             </div>
+            <span class="count"></span>
+            <div class="price"></div>
             <h2>Choisissez votre formule</h2>
             <div class="offers">
                 <div class="basic selected">
@@ -38,7 +41,9 @@
                 </div>
             </div>
             <span>Le prix sera de :</span>
-            <div class="price"></div>
+            <div>
+                <div class="price"></div><span>+ 400€ de mise en place</span>
+            </div>
         </div>
     </div>
 

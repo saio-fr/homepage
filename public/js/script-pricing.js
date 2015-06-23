@@ -18,13 +18,11 @@ $( document ).ready(function() {
 				forfait = 'basic';
 				calcAuto = calcAuto / ratioAuto;
 				calcLive = calcLive / ratioLive;
-				$(".price").html("Votre prix sera de " + calc + "€ /mois");
 			}
 			if ($(this).parent().hasClass("pro")) {
 				forfait = 'pro';
 				calcAuto = calcAuto / ratioAuto;
 				calcLive = calcLive / ratioLive;
-				$(".price").html("Votre prix sera de " + calc + "€ /mois");
 			}
 			else {
 				return true;
@@ -55,7 +53,7 @@ $( document ).ready(function() {
 	    
 	    if ($valueBubble.length) {
 	      $valueBubble[0].style.left = Math.ceil(position) + 'px';
-	      $valueBubble[0].innerHTML = value;
+	      $valueBubble[0].innerHTML = value +"<br>conversations";
 
 	      if (forfait === 'basic') {
 			calcAuto = value * 0.2 ;	      	
@@ -63,7 +61,8 @@ $( document ).ready(function() {
 	      if (forfait === 'pro') {
 			calcAuto = value * 0.4 ;	      	
 	      };
-	      $(".price").html("<strong>" + calcAuto + "€ /mois</strong> + 400€ de mise en place");
+	      $(".count").html(value +" conversations, soit :");
+	      $(".price").html(calcAuto + "€ /mois");
 	    }
 	  }
 	});
@@ -82,7 +81,7 @@ $( document ).ready(function() {
 	    
 	    if ($valueBubble.length) {
 	      $valueBubble[0].style.left = Math.ceil(position) + 'px';
-	      $valueBubble[0].innerHTML = value;
+	      $valueBubble[0].innerHTML = value + "<br>agents";
 
 	      if (forfait === 'basic') {
 			calcLive = value * 0.2 ;	      	
@@ -90,7 +89,8 @@ $( document ).ready(function() {
 	      if (forfait === 'pro') {
 			calcLive = value * 0.4 ;	      	
 	      };
-	      $(".price").html("<strong>" + calcLive + "€ /mois</strong> + 200€ de mise en place");
+	      $(".count").html(value +" agents, soit :");
+	      $(".price").html(calcLive + "€ /mois");
 	    }
 	  }
 	});
