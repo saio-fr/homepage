@@ -1805,10 +1805,15 @@ PRICING
 		color: #898989;
 	}
 
-	#pricing .selected .button {
-		border: 1px solid #ffd234;
-		background-color: #ffd234;
-		color: #3c3c3c;
+	#pricing.auto-chat .selected .button {
+		border: 1px solid #8dc34c;
+		color: #8dc34c;
+	}
+
+
+	#pricing.live-chat .selected .button {
+		border: 1px solid #ff7955;
+		color: #ff7955;
 	}
 
 	#pricing ul {
@@ -1839,15 +1844,15 @@ PRICING
 
 	#pricing span {
 		display: inline-block;
-		margin-top: 28px;
 		margin-right: 5px;
 	}
 
 	#pricing .price {
 		display: inline-block;
-		font-weight: 400;
-		background-color: #eee;
-		padding: 20px;
+		font-size: 24px;
+		color: #3c3c3c;
+		background-color: #ffd234;
+		padding: 25px;
 		margin-right: 10px;
 		line-height: 15px;
 	}
