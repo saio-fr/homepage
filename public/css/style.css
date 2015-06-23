@@ -1829,6 +1829,10 @@ PRICING
 		opacity: 1;
 	}
 
+	#pricing li {
+		margin-bottom: 5px;
+	}
+
 	#pricing .basic {
 		display: inline-block;
 		vertical-align: top;
