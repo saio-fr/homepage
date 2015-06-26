@@ -3,6 +3,7 @@ $( document ).ready(function() {
 	//variables
 	var forfait = 'basic';
 	var val = 9;
+	var valLive = 5;
 
 	var calcAuto;
 	var ratioAuto;
@@ -11,6 +12,8 @@ $( document ).ready(function() {
 	var calcLive;
 	var agents;
 	var ratioLive = 2;
+
+	var calcOptions = 0;
 
 	//slider var
 	var valueBubble = '<output class="rangeslider__value-bubble" />',
@@ -24,19 +27,34 @@ $( document ).ready(function() {
 			$(".offers").children().removeClass("selected");
 			$(this).parent().addClass("selected");
 
-			if ($(this).parent().hasClass("basic")) {
-				forfait = 'basic';
-				updatePrice();
-				calcLive = calcLive / ratioLive;
+			if ($(this).parent().parent().hasClass("auto-chat")) {
+				if ($(this).parent().hasClass("basic")) {
+					forfait = 'basic';
+					updatePrice();
+				}
+				if ($(this).parent().hasClass("pro")) {
+					forfait = 'pro';
+					updatePrice();
+				}
+				else {
+					return true;
+				}					
 			}
-			if ($(this).parent().hasClass("pro")) {
-				forfait = 'pro';
-				updatePrice();
-				calcLive = calcLive / ratioLive;
+			if ($(this).parent().parent().hasClass("live-chat")) {
+				if ($(this).parent().hasClass("basic")) {
+					forfait = 'basic';
+					calcLive = valLive * 39 ;
+					$(".price").html(calcLive + "€ /mois");	
+				}
+				if ($(this).parent().hasClass("pro")) {
+					forfait = 'pro';
+					calcLive = valLive * 49 ;
+					$(".price").html(calcLive + "€ /mois");
+				}
+				else { 
+					return true;
+				}					
 			}
-			else {
-				return true;
-			}	
 
 		}
 		else {
@@ -96,7 +114,7 @@ $( document ).ready(function() {
 	    if ($valueBubble.length) {
 	    	$valueBubble[0].style.left = Math.ceil(position) + 'px';
 			if (val < 10) {
-				$valueBubble[0].innerHTML = (value + 1) * 100 +"<br>conversations";
+				$valueBubble[0].innerHTML = (value + 1) * 1000 +"<br>pages vues";
 				if (forfait === 'basic') {
 					calcAuto = 69 + val * 10;
 				}
@@ -106,7 +124,7 @@ $( document ).ready(function() {
 				$(".price").html(calcAuto + "€ /mois");
 			}
 			if (val > 18) {
-				$valueBubble[0].innerHTML = (value - 17) * 10000 +"<br>conversations";
+				$valueBubble[0].innerHTML = (value - 17) * 100000 +"<br>pages vues";
 				if (forfait === 'basic') {
 					calcAuto = 519 + (value - 18) * 160;
 				}
@@ -116,7 +134,7 @@ $( document ).ready(function() {
 				$(".price").html(calcAuto + "€ /mois");
 			}
 			if ((9 < val) && (val < 19)) {
-				$valueBubble[0].innerHTML = (val - 8) * 1000 +"<br>conversations";
+				$valueBubble[0].innerHTML = (val - 8) * 10000 +"<br>pages vues";
 				if (forfait === 'basic') {
 					calcAuto = 159 + (val - 9) * 40;
 				}
@@ -126,7 +144,7 @@ $( document ).ready(function() {
 				$(".price").html(calcAuto + "€ /mois");
 			}
 			if (value === 28) {
-				$valueBubble[0].innerHTML = "+100000 conversations";
+				$valueBubble[0].innerHTML = "+1000000 pages vues";
 				$(".price").html("Sur Devis");
 			}
 	    }
@@ -141,6 +159,7 @@ $( document ).ready(function() {
 	      this.update();
 	  },
 	  onSlide: function(pos, value) {
+	  	valLive = value;
 	    var $valueBubble = $('.rangeslider__value-bubble', this.$range);
 	    tempPosition = pos + this.grabX;
 	    position = (tempPosition <= this.handleWidth) ? this.handleWidth : (tempPosition >= this.maxHandleX) ? this.maxHandleX : tempPosition;
@@ -150,14 +169,32 @@ $( document ).ready(function() {
 	      $valueBubble[0].innerHTML = value + "<br>agents";
 
 	      if (forfait === 'basic') {
-			calcLive = value * 0.2 ;	      	
+			calcLive = valLive * 39 ;	      	
 	      };
 	      if (forfait === 'pro') {
-			calcLive = value * 0.4 ;	      	
+			calcLive = valLive * 49 ;	      	
 	      };
 	      $(".price").html(calcLive + "€ /mois");
 	    }
 	  }
+	});
+
+    //options
+	$(".checkbox").click(function() {
+		if ($(this).hasClass("checked")) {
+			$(this).removeClass("checked");	
+			calcOptions = calcOptions - parseFloat($(this).attr("value"));
+		}
+		else {
+			$(this).addClass("checked");
+			calcOptions = calcOptions + parseFloat($(this).attr("value"));
+		}
+		if (calcOptions != 0) {
+			$(".options").html("+ " + calcOptions + "€ d'options");			
+		};
+		if (calcOptions === 0) {
+			$(".options").html("");
+		}
 	});
 
 

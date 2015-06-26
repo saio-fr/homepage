@@ -1795,6 +1795,10 @@ PRICING
 		margin-bottom: 24px;
 	}
 
+	#pricing p {
+		margin-bottom: 23px;
+	}
+
 	#pricing .slider {
 		margin: 87px 0 30px;
 	}
@@ -1859,6 +1863,35 @@ PRICING
 		padding: 25px;
 		margin-right: 10px;
 		line-height: 15px;
+	}
+
+	#pricing .option {
+		margin-bottom: 11px;
+	}
+
+	#pricing .option.last {
+		margin-bottom: 0;
+	}
+
+	#pricing .checkbox {
+		display: inline-block;
+		vertical-align: top;
+		outline: 1px solid rgba(89, 89, 89, .4);
+		border: 4px solid #fff;
+		background-color: #fff;
+		width: 12px;
+		height: 12px;
+		margin-top: 4px;
+		pointer: hand;
+		cursor: pointer;
+	}
+
+	#pricing .checkbox.checked {
+		background-color: #3c3c3c;
+	}
+
+	#pricing span {
+		margin-left: 15px;
 	}
 
 	/* Slider */
@@ -1952,7 +1985,7 @@ PRICING
 
 	.auto-chat .rangeslider__value-bubble {
 		background-color: #8dc34c;
-		width: 95px;
+		width: 80px;
 		margin-left: -52px;
 	}
 
