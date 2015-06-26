@@ -1865,6 +1865,11 @@ PRICING
 		line-height: 15px;
 	}
 
+	#pricing .options {
+		vertical-align: top;
+		margin-top: 22px;
+	}
+
 	#pricing .option {
 		margin-bottom: 11px;
 	}
