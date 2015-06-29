@@ -1853,6 +1853,7 @@ PRICING
 	#pricing span {
 		display: inline-block;
 		margin-right: 5px;
+		width: calc(100% - 40px);
 	}
 
 	#pricing .price {
