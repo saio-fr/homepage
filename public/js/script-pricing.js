@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 	//variables
-	var forfait = 'basic';
+	var forfait = 'pro';
 	var val = 9;
 	var valLive = 5;
 
