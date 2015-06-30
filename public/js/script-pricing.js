@@ -65,19 +65,19 @@ $( document ).ready(function() {
 	function updatePrice() {
 		if (val < 11) {
 			if (forfait === 'basic') {
-				calcAuto = Math.round((159 + val * 40));
+				calcAuto = Math.round((159 + (val - 1) * 40));
 			}
 			if (forfait === 'pro') {
-				calcAuto = Math.round((179 + val * 80));
+				calcAuto = Math.round((589 + (val - 1) * 80));
 			}
 			$(".price").html(calcAuto + "€ /mois");
 		}
 		if (val > 10) {
 			if (forfait === 'basic') {
-				calcAuto = Math.round((419 + (val - 8) * 160));
+				calcAuto = Math.round((649 + (val - 11) * 160));
 			}
 			if (forfait === 'pro') {
-				calcAuto = Math.round((499 + (val - 8) * 240));
+				calcAuto = Math.round((1549 + (val - 11) * 240));
 			}
 			$(".price").html(calcAuto + "€ /mois");
 		}
@@ -106,20 +106,20 @@ $( document ).ready(function() {
 			if (val < 11) {
 				$valueBubble[0].innerHTML = value * 10000 +"<br>pages vues";
 				if (forfait === 'basic') {
-					calcAuto = Math.round((159 + value * 40));
+					calcAuto = Math.round((159 + (value -1) * 40));
 				}
 				if (forfait === 'pro') {
-					calcAuto = Math.round((179 + value * 80));
+					calcAuto = Math.round((589 + (value - 1) * 80));
 				}
 				$(".price").html(calcAuto + "€ /mois");
 			}
 			if (val > 10) {
 				$valueBubble[0].innerHTML = (value - 9) * 100000 +"<br>pages vues";
 				if (forfait === 'basic') {
-					calcAuto = Math.round((649 + (value - 10) * 160));
+					calcAuto = Math.round((649 + (value - 11) * 160));
 				}
 				if (forfait === 'pro') {
-					calcAuto = Math.round((979 + (value - 10) * 240));
+					calcAuto = Math.round((1549 + (value - 11) * 240));
 				}
 				$(".price").html(calcAuto + "€ /mois");
 			}
