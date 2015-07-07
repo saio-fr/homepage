@@ -82,6 +82,11 @@ router.get('/pricing-live-chat', function (req, res, next) {
   res.render('pricing-live-chat', { title: 'Pricing live chat SAIO', description : '', url : config.urlDomain, route : ''});
 });
 
+//GET Showroom page
+router.get('/showroom', function (req, res, next) {
+  res.render('showroom', { title: 'Showroom SAIO', description : '', url : config.urlDomain, route : ''});
+});
+
 //GET login
 router.get('/login', function (req, res, next) {
   res.redirect('http://lily.saio.fr/login');
