@@ -15,7 +15,7 @@ var mc = new mcapi.Mailchimp(apiKey, {version: '2.0'});
 router.get('*', function (req, res, next) {
   var path = '/' + req.path.replace('/','');
   if (req.hostname === 'www.saio.fr') {
-    res.redirect(301, 'http://saio.fr' + path); 
+    res.redirect(301, 'http://saio.fr' + path);
   }
   else {
     next();
@@ -95,9 +95,6 @@ router.get('/login', function (req, res, next) {
 //GET 404 page
 router.get('*',function (req, res, next) {
   res.render('404', { title: 'SAIO - Simplifiez votre relation client digitale', description : 'SAIO vous aide à comprendre et répondre aux attentes de vos visiteurs !', url : config.urlDomain, route : ''});
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
 });
 
 //send mail
@@ -209,7 +206,7 @@ router.post('/mail', function (req, res, next){
   };
 });
 
-module.exports = function (_app, _config) { 
+module.exports = function (_app, _config) {
   app = _app;
   config = _config;
   return router;
