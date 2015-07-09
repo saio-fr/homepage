@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!--Pricing-->
+<section id="pricing" class="auto-chat">
+
+    <div class="wrapper">
+        <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
+        <div class="container">
+            <h1>Prix d'achat distributeur</h1>
+            <h2 class="first">Pages vues mensuelles</h2>
+            <!--<p>Quel est le nombre moyen de pages vues par mois chez votre client ?</p>-->
+            <div class="slider">
+                <input type="range" min="1" max="20" step="1" value="10">
+            </div>
+            <!--<h2>Formule</h2>
+            <p>Quelle est la formule la plus adaptée votre client ?</p>
+            <div class="offers auto-chat">
+                <div class="basic">
+                    <div class="button">BASIC</div>
+                    <ul>
+                        <li>Construisez votre base de Q/R</li>
+                        <li>Répondez automatiquement aux questions inscrites dans votre base</li>
+                        <li>Récupérez les questions posées par vos clients</li>
+                        <li>Améliorez votre base de Q/R</li>
+                        <li>Redirigez vos clients en cas de besoin</li>
+                    </ul>
+                </div>
+                <div class="pro selected">
+                    <div class="button">PRO</div>
+                    <ul>
+                         <li>Construisez votre base de Q/R</li>
+                        <li>Répondez automatiquement aux questions inscrites dans votre base</li>
+                        <li>Récupérez les questions posées par vos clients</li>
+                        <li>Améliorez votre base de Q/R</li>
+                        <li>Redirigez vos clients en cas de besoin</li>
+                        <li>Discutez en temps réel avec les visiteurs de votre site Internet</li>
+                        <li>Bénéficiez de statistiques d’activité en temps réel</li>
+                        <li>Recevez un reporting d’activité hebdomadaire</li>
+                    </ul>
+                </div>
+            </div>-->
+            <h2>Prix</h2>
+            <div class="price"></div>
+            <span class="options"></span>
+            <h2>Options</h2>
+            <div class="options-container">
+                <div class="option">
+                    <div class="checkbox" value="600"></div><span>Graphisme (600€)</span><div class="help">?<p class="info">Adaptation de l'interface à la charte graphique de votre client</p></div>
+                </div>
+                <div class="option">
+                    <div class="checkbox" value="2400"></div><span>Avatar (2400€)</span><div class="help">?<p class="info">Création d'un avatar virtuel qui sera le porte-parole de la marque<br>3 proposition maximum</p></div>
+                </div>
+                <div class="option last">
+                    <div class="checkbox" value="3000"></div><span>Marque blanche (3000€)</span><div class="help">?<p class="info">Suppression des indication relatives à SAIO</p></div>
+                </div>
+            </div>
+             <div class="options-container">
+                <div class="option">
+                    <div class="checkbox" value="828"></div><span>Live chat (69€/mois)</span><div class="help">?<p class="info">Proposition de redirection vers un conseiller de clientèle via live chat</p></div>
+                </div>
+                <div class="option">
+                    <span>Co-browsing (coming soon)</span>
+                </div>
+                <div class="option last">
+                    <span>Rédaction (sur devis)</span><div class="help">?<p class="info">Réalisation d'une première base de connaissances pour le chat automatique</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

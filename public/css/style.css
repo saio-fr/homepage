@@ -1793,6 +1793,45 @@ PRICING
 		font-size: 24px;
 		margin-top: 35px;
 		margin-bottom: 24px;
+		width: 250px;
+	}
+
+	#pricing h2.first {
+		display: inline;
+	}
+
+	#pricing .help {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		font-size: 6px;
+		font-weight: 300;
+		line-height: 10px;
+		color: #898989;
+		background-color: #eee;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		margin-left: 5px;
+	}
+
+	#pricing .help:hover .info {
+		display: block;
+	}
+
+	#pricing .help .info {
+		display: none;
+		position: absolute;
+		text-align: left;
+		top: -15px;
+		font-size: 10px;
+		line-height: 20px;
+		width: 150px;
+		color: #898989;
+		background-color: #eee;
+		padding: 10px 20px;
+		z-index: 50;
 	}
 
 	#pricing p {
@@ -1853,12 +1892,11 @@ PRICING
 	#pricing span {
 		display: inline-block;
 		margin-right: 5px;
-		width: calc(100% - 40px);
 	}
 
 	#pricing .price {
 		display: inline-block;
-		font-size: 24px;
+		font-size: 18px;
 		color: #3c3c3c;
 		background-color: #ffd234;
 		padding: 25px;
@@ -1866,8 +1904,22 @@ PRICING
 		line-height: 15px;
 	}
 
-	#pricing .options {
+	#pricing .price strong {
+		font-size: 24px;
+	}
+
+	.options-container {
+		display: inline-block;
 		vertical-align: top;
+		width: 260px;
+		margin-right: 46px;
+	}
+
+	#pricing .options {
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		font-weight: 400;
 		margin-top: 22px;
 	}
 

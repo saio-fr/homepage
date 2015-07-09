@@ -77,9 +77,9 @@ router.get('/pricing-chat-auto', function (req, res, next) {
   res.render('pricing-chat-auto', { title: 'Pricing chat automatique SAIO', description : '', url : config.urlDomain, route : ''});
 });
 
-//GET live chat pricing page
-router.get('/pricing-live-chat', function (req, res, next) {
-  res.render('pricing-live-chat', { title: 'Pricing live chat SAIO', description : '', url : config.urlDomain, route : ''});
+//GET distributeurs pricing page
+router.get('/pricing-distributeurs', function (req, res, next) {
+  res.render('pricing-distributeurs', { title: 'Pricing distributeurs SAIO', description : '', url : config.urlDomain, route : ''});
 });
 
 //GET Showroom page

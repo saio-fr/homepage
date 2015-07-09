@@ -44,12 +44,12 @@ $( document ).ready(function() {
 				if ($(this).parent().hasClass("basic")) {
 					forfait = 'basic';
 					calcLive = valLive * 39 ;
-					$(".price").html(calcLive + "€ /mois");	
+					$(".price").html("<strong>" + calcLive + "€</strong> /mois");	
 				}
 				if ($(this).parent().hasClass("pro")) {
 					forfait = 'pro';
 					calcLive = valLive * 49 ;
-					$(".price").html(calcLive + "€ /mois");
+					$(".price").html("<strong>" + calcLive + "€</strong> /mois");
 				}
 				else { 
 					return true;
@@ -70,7 +70,7 @@ $( document ).ready(function() {
 			if (forfait === 'pro') {
 				calcAuto = Math.round((589 + (val - 1) * 80));
 			}
-			$(".price").html(calcAuto + "€ /mois");
+			$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
 		}
 		if (val > 10) {
 			if (forfait === 'basic') {
@@ -79,7 +79,7 @@ $( document ).ready(function() {
 			if (forfait === 'pro') {
 				calcAuto = Math.round((1549 + (val - 11) * 240));
 			}
-			$(".price").html(calcAuto + "€ /mois");
+			$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
 		}
 		if (val === 20) {
 			$(".price").html("Sur Devis");
@@ -111,7 +111,7 @@ $( document ).ready(function() {
 				if (forfait === 'pro') {
 					calcAuto = Math.round((589 + (value - 1) * 80));
 				}
-				$(".price").html(calcAuto + "€ /mois");
+				$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
 			}
 			if (val > 10) {
 				$valueBubble[0].innerHTML = (value - 9) * 100000 +"<br>pages vues";
@@ -121,7 +121,7 @@ $( document ).ready(function() {
 				if (forfait === 'pro') {
 					calcAuto = Math.round((1549 + (value - 11) * 240));
 				}
-				$(".price").html(calcAuto + "€ /mois");
+				$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
 			}
 			if (value === 20) {
 				$valueBubble[0].innerHTML = "+1000000 pages vues";
@@ -163,10 +163,12 @@ $( document ).ready(function() {
 	$(".checkbox").click(function() {
 		if ($(this).hasClass("checked")) {
 			$(this).removeClass("checked");	
+			$(this).parent().css({'font-weight':'300'});
 			calcOptions = calcOptions - parseFloat($(this).attr("value"));
 		}
 		else {
 			$(this).addClass("checked");
+			$(this).parent().css({'font-weight':'400'});
 			calcOptions = calcOptions + parseFloat($(this).attr("value"));
 		}
 		if (calcOptions != 0) {
