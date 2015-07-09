@@ -13,12 +13,19 @@ $( document ).ready(function() {
 	var agents;
 	var ratioLive = 2;
 
+	var ratioDistrib = 0.7;
+
 	var calcOptions = 0;
 
 	//slider var
 	var valueBubble = '<output class="rangeslider__value-bubble" />',
     tempPosition, 
     position;
+
+    //numbers with spaces
+	function numberWithSpaces(x) {
+	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+	}
 
 	//pricing selection
 	$(".button").click(function() {
@@ -43,13 +50,13 @@ $( document ).ready(function() {
 			if ($(this).parent().parent().hasClass("live-chat")) {
 				if ($(this).parent().hasClass("basic")) {
 					forfait = 'basic';
-					calcLive = valLive * 39 ;
-					$(".price").html("<strong>" + calcLive + "€</strong> /mois");	
+					calcLive = valLive * 39 * ratioDistrib;
+					$(".price").html("<strong>" + numberWithSpaces(calcLive) + "€</strong> /mois");	
 				}
 				if ($(this).parent().hasClass("pro")) {
 					forfait = 'pro';
-					calcLive = valLive * 49 ;
-					$(".price").html("<strong>" + calcLive + "€</strong> /mois");
+					calcLive = valLive * 49 * ratioDistrib;
+					$(".price").html("<strong>" + numberWithSpaces(calcLive) + "€</strong> /mois");
 				}
 				else { 
 					return true;
@@ -65,21 +72,21 @@ $( document ).ready(function() {
 	function updatePrice() {
 		if (val < 11) {
 			if (forfait === 'basic') {
-				calcAuto = Math.round((159 + (val - 1) * 40));
+				calcAuto = Math.round((159 + (val - 1) * 40) * ratioDistrib);
 			}
 			if (forfait === 'pro') {
-				calcAuto = Math.round((589 + (val - 1) * 80));
+				calcAuto = Math.round((589 + (val - 1) * 80) * ratioDistrib);
 			}
-			$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
+			$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
 		}
 		if (val > 10) {
 			if (forfait === 'basic') {
-				calcAuto = Math.round((649 + (val - 11) * 160));
+				calcAuto = Math.round((649 + (val - 11) * 160) * ratioDistrib);
 			}
 			if (forfait === 'pro') {
-				calcAuto = Math.round((1549 + (val - 11) * 240));
+				calcAuto = Math.round((1549 + (val - 11) * 240) * ratioDistrib);
 			}
-			$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
+			$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
 		}
 		if (val === 20) {
 			$(".price").html("Sur Devis");
@@ -104,27 +111,27 @@ $( document ).ready(function() {
 	    if ($valueBubble.length) {
 	    	$valueBubble[0].style.left = Math.ceil(position) + 'px';
 			if (val < 11) {
-				$valueBubble[0].innerHTML = value * 10000 +"<br>pages vues";
+				$valueBubble[0].innerHTML = numberWithSpaces(value * 10000) +"<br>pages vues";
 				if (forfait === 'basic') {
-					calcAuto = Math.round((159 + (value -1) * 40));
+					calcAuto = Math.round((159 + (value -1) * 40) * ratioDistrib);
 				}
 				if (forfait === 'pro') {
-					calcAuto = Math.round((589 + (value - 1) * 80));
+					calcAuto = Math.round((589 + (value - 1) * 80) * ratioDistrib);
 				}
 				$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
 			}
 			if (val > 10) {
-				$valueBubble[0].innerHTML = (value - 9) * 100000 +"<br>pages vues";
+				$valueBubble[0].innerHTML = numberWithSpaces((value - 9) * 100000) +"<br>pages vues";
 				if (forfait === 'basic') {
-					calcAuto = Math.round((649 + (value - 11) * 160));
+					calcAuto = Math.round((649 + (value - 11) * 160) * ratioDistrib);
 				}
 				if (forfait === 'pro') {
-					calcAuto = Math.round((1549 + (value - 11) * 240));
+					calcAuto = Math.round((1549 + (value - 11) * 240) * ratioDistrib);
 				}
-				$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
+				$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
 			}
 			if (value === 20) {
-				$valueBubble[0].innerHTML = "+1000000 pages vues";
+				$valueBubble[0].innerHTML = "+1 000 000 pages vues";
 				$(".price").html("Sur Devis");
 			}
 	    }
@@ -149,12 +156,12 @@ $( document ).ready(function() {
 	      $valueBubble[0].innerHTML = value + "<br>agents";
 
 	      if (forfait === 'basic') {
-			calcLive = valLive * 39;	      	
+			calcLive = valLive * 39 * ratioDistrib;	      	
 	      };
 	      if (forfait === 'pro') {
-			calcLive = valLive * 49;	      	
+			calcLive = valLive * 49 * ratioDistrib;	      	
 	      };
-	      $(".price").html(calcLive + "€ /mois");
+	      $(".price").html(numberWithSpaces(calcLive) + "€ /mois");
 	    }
 	  }
 	});
@@ -172,7 +179,7 @@ $( document ).ready(function() {
 			calcOptions = calcOptions + parseFloat($(this).attr("value"));
 		}
 		if (calcOptions != 0) {
-			$(".options").html("+ " + calcOptions + "€ d'options");			
+			$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options");			
 		};
 		if (calcOptions === 0) {
 			$(".options").html("");
