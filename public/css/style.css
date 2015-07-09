@@ -1825,12 +1825,15 @@ PRICING
 		position: absolute;
 		text-align: left;
 		top: -15px;
+		left: -15px;
 		font-size: 10px;
 		line-height: 20px;
 		width: 150px;
 		color: #898989;
-		background-color: #eee;
+		border: 1px solid #eee;
+		background-color: #fff;
 		padding: 10px 20px;
+		border-radius: 5px;
 		z-index: 50;
 	}
 
@@ -1911,8 +1914,8 @@ PRICING
 	.options-container {
 		display: inline-block;
 		vertical-align: top;
-		width: 260px;
-		margin-right: 46px;
+		width: 280px;
+		margin-right: 26px;
 	}
 
 	#pricing .options {
@@ -1928,6 +1931,10 @@ PRICING
 
 	#pricing .option.last {
 		margin-bottom: 0;
+	}
+
+	#pricing .option .bdd {
+		width: calc(100% - 40px);
 	}
 
 	#pricing .checkbox {
