@@ -1805,14 +1805,14 @@ PRICING
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
-		font-size: 6px;
-		font-weight: 300;
-		line-height: 10px;
+		font-size: 8px;
+		font-weight: 400;
+		line-height: 15px;
 		color: #898989;
 		background-color: #eee;
-		width: 10px;
-		height: 10px;
-		border-radius: 5px;
+		width: 15px;
+		height: 15px;
+		border-radius: 8px;
 		margin-left: 5px;
 	}
 
@@ -1826,9 +1826,10 @@ PRICING
 		text-align: left;
 		top: -15px;
 		left: -15px;
-		font-size: 10px;
-		line-height: 20px;
-		width: 150px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 25px;
+		width: 180px;
 		color: #898989;
 		border: 1px solid #eee;
 		background-color: #fff;
@@ -1934,7 +1935,7 @@ PRICING
 	}
 
 	#pricing .option .bdd {
-		width: calc(100% - 40px);
+		width: calc(100% - 80px);
 	}
 
 	#pricing .checkbox {

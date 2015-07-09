@@ -16,6 +16,7 @@ $( document ).ready(function() {
 	var ratioDistrib = 0.7;
 
 	var calcOptions = 0;
+	var devis = "";
 
 	//slider var
 	var valueBubble = '<output class="rangeslider__value-bubble" />',
@@ -171,15 +172,22 @@ $( document ).ready(function() {
 		if ($(this).hasClass("checked")) {
 			$(this).removeClass("checked");	
 			$(this).parent().css({'font-weight':'300'});
-			calcOptions = calcOptions - parseFloat($(this).attr("value"));
+			calcOptions -= parseFloat($(this).attr("value"));
 		}
 		else {
 			$(this).addClass("checked");
 			$(this).parent().css({'font-weight':'400'});
-			calcOptions = calcOptions + parseFloat($(this).attr("value"));
+			calcOptions += parseFloat($(this).attr("value"));
 		}
 		if (calcOptions != 0) {
-			$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options");			
+			if ($(this).attr("devis") != null && devis === "") {
+				devis = $(this).attr("devis");
+				$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options" + devis);	
+			}
+			else {
+				devis = "";
+				$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options");			
+			}
 		};
 		if (calcOptions === 0) {
 			$(".options").html("");
