@@ -123,8 +123,9 @@ $( document ).ready(function() {
 			$(this).parent().css({'font-weight':'300'});
 			calcOptions -= parseFloat($(this).attr("value"));
 			if (($(this).attr("forfait")) != null) {
-				forfaitOptions -= parseFloat($(this).attr("forfait"))/100;
+				forfaitOptions -= parseFloat($(this).attr("forfait"));
 				updatePrice();
+				console.log(forfaitOptions);
 			}
 		}
 		else {
@@ -134,6 +135,7 @@ $( document ).ready(function() {
 			if (($(this).attr("forfait")) != null) {
 				forfaitOptions += parseFloat($(this).attr("forfait"));
 				updatePrice();
+				console.log(forfaitOptions);
 			}
 		}
 
