@@ -1915,8 +1915,8 @@ PRICING
 	.options-container {
 		display: inline-block;
 		vertical-align: top;
-		width: 280px;
-		margin-right: 26px;
+		width: 310px;
+		margin-right: 7px;
 	}
 
 	#pricing .options {
@@ -1935,7 +1935,7 @@ PRICING
 	}
 
 	#pricing .option .bdd {
-		width: calc(100% - 80px);
+		width: calc(100% - 70px);
 	}
 
 	#pricing .checkbox {
@@ -1952,6 +1952,24 @@ PRICING
 	}
 
 	#pricing .checkbox.checked {
+		background-color: #3c3c3c;
+	}
+
+	#pricing .radio {
+		display: inline-block;
+		vertical-align: top;
+		outline: 1px solid rgba(89, 89, 89, .4);
+		border: 4px solid #fff;
+		background-color: #fff;
+		width: 12px;
+		height: 12px;
+		margin-top: 4px;
+		pointer: hand;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+
+	#pricing .radio.selected {
 		background-color: #3c3c3c;
 	}
 

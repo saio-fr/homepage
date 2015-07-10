@@ -1,22 +1,16 @@
 $( document ).ready(function() {
 
 	//variables
-	var forfait = 'pro';
-	var val = 9;
-	var valLive = 5;
+	var val = 9,
+	calcAuto,
 
-	var calcAuto;
-	var ratioAuto;
-	var conversationRange;
+	reducInit = 1,
+	reduc = reducInit,
 
-	var calcLive;
-	var agents;
-	var ratioLive = 2;
-
-	var ratioDistrib = 0.7;
-
-	var calcOptions = 0;
-	var devis = "";
+	calcOptions = 0,
+	forfaitOptions = 0,
+	optionsPrice = "",
+	devisTrue = ""; 
 
 	//slider var
 	var valueBubble = '<output class="rangeslider__value-bubble" />',
@@ -30,68 +24,44 @@ $( document ).ready(function() {
 
 	//pricing selection
 	$(".button").click(function() {
+
 		if (!$(this).parent().hasClass("selected")) {
 
 			$(".offers").children().removeClass("selected");
 			$(this).parent().addClass("selected");
 
-			if ($(this).parent().parent().hasClass("auto-chat")) {
-				if ($(this).parent().hasClass("basic")) {
-					forfait = 'basic';
-					updatePrice();
-				}
-				if ($(this).parent().hasClass("pro")) {
-					forfait = 'pro';
-					updatePrice();
-				}
-				else {
-					return true;
-				}					
+			if ($(this).parent().hasClass("basic")) {
+				forfait = 'basic';
+				updatePrice();
 			}
-			if ($(this).parent().parent().hasClass("live-chat")) {
-				if ($(this).parent().hasClass("basic")) {
-					forfait = 'basic';
-					calcLive = valLive * 39 * ratioDistrib;
-					$(".price").html("<strong>" + numberWithSpaces(calcLive) + "€</strong> /mois");	
-				}
-				if ($(this).parent().hasClass("pro")) {
-					forfait = 'pro';
-					calcLive = valLive * 49 * ratioDistrib;
-					$(".price").html("<strong>" + numberWithSpaces(calcLive) + "€</strong> /mois");
-				}
-				else { 
-					return true;
-				}					
+			if ($(this).parent().hasClass("pro")) {
+				forfait = 'pro';
+				updatePrice();
 			}
+			else {
+				return true;
+			}					
 		}
 		else {
 			return true;
 		}
+
 	});
 
 	//update price
 	function updatePrice() {
+
 		if (val < 11) {
-			if (forfait === 'basic') {
-				calcAuto = Math.round((159 + (val - 1) * 40) * ratioDistrib);
-			}
-			if (forfait === 'pro') {
-				calcAuto = Math.round((589 + (val - 1) * 80) * ratioDistrib);
-			}
-			$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
+			calcAuto = Math.round((406 + (val - 1) * 56) * reduc);
 		}
 		if (val > 10) {
-			if (forfait === 'basic') {
-				calcAuto = Math.round((649 + (val - 11) * 160) * ratioDistrib);
-			}
-			if (forfait === 'pro') {
-				calcAuto = Math.round((1549 + (val - 11) * 240) * ratioDistrib);
-			}
-			$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
+			calcAuto = Math.round((1084 + (val - 11) * 168) * reduc);
 		}
-		if (val === 20) {
-			$(".price").html("Sur Devis");
+		if (val > 19) {
+			calcAuto = Math.round((3436 + (val - 21) * 1008) * reduc);
 		}
+
+		$(".price").html("<strong>" + numberWithSpaces(calcAuto + forfaitOptions) + "€</strong> /mois");
 	}
 
 	//slider
@@ -111,87 +81,79 @@ $( document ).ready(function() {
 
 	    if ($valueBubble.length) {
 	    	$valueBubble[0].style.left = Math.ceil(position) + 'px';
+
 			if (val < 11) {
 				$valueBubble[0].innerHTML = numberWithSpaces(value * 10000) +"<br>pages vues";
-				if (forfait === 'basic') {
-					calcAuto = Math.round((159 + (value -1) * 40) * ratioDistrib);
-				}
-				if (forfait === 'pro') {
-					calcAuto = Math.round((589 + (value - 1) * 80) * ratioDistrib);
-				}
-				$(".price").html("<strong>" + calcAuto + "€</strong> /mois");
+				calcAuto = Math.round((406 + (value - 1) * 56) * reduc);
 			}
 			if (val > 10) {
 				$valueBubble[0].innerHTML = numberWithSpaces((value - 9) * 100000) +"<br>pages vues";
-				if (forfait === 'basic') {
-					calcAuto = Math.round((649 + (value - 11) * 160) * ratioDistrib);
-				}
-				if (forfait === 'pro') {
-					calcAuto = Math.round((1549 + (value - 11) * 240) * ratioDistrib);
-				}
-				$(".price").html("<strong>" + numberWithSpaces(calcAuto) + "€</strong> /mois");
+				calcAuto = Math.round((1084 + (value - 11) * 168) * reduc);
 			}
-			if (value === 20) {
-				$valueBubble[0].innerHTML = "+1 000 000 pages vues";
-				$(".price").html("Sur Devis");
+			if (value > 19) {
+				$valueBubble[0].innerHTML = numberWithSpaces((value - 19) * 1000000) +"<br>pages vues";
+				calcAuto = Math.round((3436 + (value - 21) * 1008) * reduc);
 			}
+
+			$(".price").html("<strong>" + numberWithSpaces(calcAuto + forfaitOptions) + "€</strong> /mois");
 	    }
 	  }
 	});
 
-    //live chat
-	$(".live-chat").find('input[type="range"]').rangeslider({
-	  polyfill: false,
-	  onInit: function() {
-	      this.$range.append($(valueBubble));
-	      this.update();
-	  },
-	  onSlide: function(pos, value) {
-	  	valLive = value;
-	    var $valueBubble = $('.rangeslider__value-bubble', this.$range);
-	    tempPosition = pos + this.grabX;
-	    position = (tempPosition <= this.handleWidth) ? this.handleWidth : (tempPosition >= this.maxHandleX) ? this.maxHandleX : tempPosition;
-	    
-	    if ($valueBubble.length) {
-	      $valueBubble[0].style.left = Math.ceil(position) + 'px';
-	      $valueBubble[0].innerHTML = value + "<br>agents";
+	//engagement
+	$(".radio").click(function() {
 
-	      if (forfait === 'basic') {
-			calcLive = valLive * 39 * ratioDistrib;	      	
-	      };
-	      if (forfait === 'pro') {
-			calcLive = valLive * 49 * ratioDistrib;	      	
-	      };
-	      $(".price").html(numberWithSpaces(calcLive) + "€ /mois");
-	    }
-	  }
+		if ($(this).hasClass("selected")) {
+			return true;
+		}
+		else {
+			$(this).parent().parent().parent().find(".radio").removeClass("selected");
+			$(this).addClass("selected");
+			reduc = reducInit - parseFloat($(this).attr("engage"))/100;
+			updatePrice();
+		}
+
 	});
 
     //options
 	$(".checkbox").click(function() {
+
 		if ($(this).hasClass("checked")) {
 			$(this).removeClass("checked");	
 			$(this).parent().css({'font-weight':'300'});
 			calcOptions -= parseFloat($(this).attr("value"));
+			if (($(this).attr("forfait")) != null) {
+				forfaitOptions -= parseFloat($(this).attr("forfait"))/100;
+				updatePrice();
+			}
 		}
 		else {
 			$(this).addClass("checked");
 			$(this).parent().css({'font-weight':'400'});
 			calcOptions += parseFloat($(this).attr("value"));
-		}
-		if (calcOptions != 0) {
-			if ($(this).attr("devis") != null && devis === "") {
-				devis = $(this).attr("devis");
-				$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options" + devis);	
+			if (($(this).attr("forfait")) != null) {
+				forfaitOptions += parseFloat($(this).attr("forfait"));
+				updatePrice();
 			}
-			else {
-				devis = "";
-				$(".options").html("<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options");			
-			}
-		};
-		if (calcOptions === 0) {
-			$(".options").html("");
 		}
+
+		if (parseFloat($(this).attr("value")) != 0) {
+			optionsPrice = "<strong>+ " + numberWithSpaces(calcOptions) + "€</strong> d'options";
+		}
+		else if (parseFloat($(this).attr("devis")) === 0 && devisTrue === "") {
+			devisTrue = " + devis";
+		}
+		else if (parseFloat($(this).attr("devis")) === 0 && devisTrue != "") {
+			devisTrue = "";
+		}
+		else if (calcOptions === 0) {
+			optionsPrice = "";
+		}
+		else {
+			return true;
+		}
+
+		$(".options").html(optionsPrice + devisTrue);
 	});
 
 

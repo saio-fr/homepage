@@ -8,59 +8,50 @@
         <img class="avatar" src="{{ url }}images/jc.svg" alt="Jean-Claude GIRON">
         <div class="container">
             <h1>Prix d'achat distributeur</h1>
-            <h2 class="first">Pages vues mensuelles</h2>
-            <!--<p>Quel est le nombre moyen de pages vues par mois chez votre client ?</p>-->
+            <h2 class="first">Pages vues mensuelles</h2><div class="help">?<p class="info">10 000 pages vues correspondent à 200 conversations en moyenne par mois.</p></div>
             <div class="slider">
-                <input type="range" min="1" max="20" step="1" value="10">
+                <input type="range" min="1" max="29" step="1" value="10">
             </div>
-            <!--<h2>Formule</h2>
-            <p>Quelle est la formule la plus adaptée votre client ?</p>
-            <div class="offers auto-chat">
-                <div class="basic">
-                    <div class="button">BASIC</div>
-                    <ul>
-                        <li>Construisez votre base de Q/R</li>
-                        <li>Répondez automatiquement aux questions inscrites dans votre base</li>
-                        <li>Récupérez les questions posées par vos clients</li>
-                        <li>Améliorez votre base de Q/R</li>
-                        <li>Redirigez vos clients en cas de besoin</li>
-                    </ul>
+            <h2>Durée d'engagement</h2>
+            <div class="options-container">
+                <div class="option">
+                    <div class="radio selected" value="0" engage="0"></div><span>6 mois</span>
                 </div>
-                <div class="pro selected">
-                    <div class="button">PRO</div>
-                    <ul>
-                         <li>Construisez votre base de Q/R</li>
-                        <li>Répondez automatiquement aux questions inscrites dans votre base</li>
-                        <li>Récupérez les questions posées par vos clients</li>
-                        <li>Améliorez votre base de Q/R</li>
-                        <li>Redirigez vos clients en cas de besoin</li>
-                        <li>Discutez en temps réel avec les visiteurs de votre site Internet</li>
-                        <li>Bénéficiez de statistiques d’activité en temps réel</li>
-                        <li>Recevez un reporting d’activité hebdomadaire</li>
-                    </ul>
+                <div class="option last">
+                    <div class="radio" value="0" engage="5"></div><span>1 an (-5%)</span>
                 </div>
-            </div>-->
+            </div>
+            <div class="options-container">
+                <div class="option">
+                    <div class="radio" value="0" engage="10"></div><span>2 ans (-10%)</span>
+                </div>
+                <div class="option last">
+                    <div class="radio" value="0" engage="20"></div><span>3 ans (-20%)</span>
+                </div>
+            </div>
             <h2>Prix</h2>
             <div class="price"></div>
             <span class="options"></span>
             <h2>Options</h2>
             <div class="options-container">
                 <div class="option">
-                    <div class="checkbox" value="600"></div><span>Graphisme (600€)</span><div class="help">?<p class="info">Adaptation de l'interface à la charte graphique de votre client</p></div>
-                </div>
-                <div class="option">
-                    <div class="checkbox" value="2400"></div><span>Avatar (2 400€)</span><div class="help">?<p class="info">Création d'un avatar virtuel sur-mesure qui sera le porte-parole de la marque<br>(3 propositions maximum)</p></div>
+                    <div class="checkbox" value="2400"></div><span>Avatar sur mesure (2 400€)</span><div class="help">?<p class="info">Création d'un avatar virtuel sur-mesure qui sera le porte-parole de la marque<br>(3 propositions maximum)</p></div>
                 </div>
                 <div class="option last">
                     <div class="checkbox" value="3000"></div><span>Marque blanche (3 000€)</span><div class="help">?<p class="info">Suppression des indications relatives à la marque SAIO</p></div>
                 </div>
             </div>
              <div class="options-container">
+                <!--<div class="option">
+                    <div class="checkbox" value="0" forfait="69"></div><span>Live chat (+ 69€/mois)</span><div class="help">?<p class="info">Proposition de redirection vers un conseiller de clientèle via live chat<br>(Nombre d'agents illimité)</p></div>
+                </div>-->
                 <div class="option">
-                    <div class="checkbox" value="828"></div><span>Live chat (69€/mois)</span><div class="help">?<p class="info">Proposition de redirection vers un conseiller de clientèle via live chat<br>(Nombre d'agents illimité)</p></div>
+                    <div class="checkbox" value="0" forfait="69"></div><span>Historique étendu (+ 69€/mois)</span><div class="help">?<p class="info">Garder un historique à vie des statistiques et conversations de l'application</p></div>
                 </div>
+            </div>
+            <div class="options-container">
                 <div class="option last">
-                    <div class="checkbox" value="0" devis=" + devis"></div>
+                    <div class="checkbox" value="0" devis="0"></div>
                     <span class="bdd">Rédaction d'une première base de connaissances (sur devis)</span><div class="help">?<p class="info">Réalisation d'une première base de questions/réponses relatives à l'entreprise</p></div>
                 </div>
             </div>
